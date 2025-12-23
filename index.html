@@ -561,7 +561,7 @@
             50% { transform: translateY(-15px); }
         }
 
-        /* Watch Mockup - Using actual screenshot */
+        /* Watch Mockup - Simple approach using the screenshot as-is */
         .watch-container {
             position: relative;
             display: flex;
@@ -570,20 +570,20 @@
         }
 
         .watch-band-top {
-            width: 70px;
-            height: 45px;
-            background: linear-gradient(180deg, transparent 0%, #2a2a2a 50%, #1a1a1a 100%);
-            border-radius: 12px 12px 0 0;
-            margin-bottom: -8px;
+            width: 60px;
+            height: 40px;
+            background: linear-gradient(180deg, transparent 0%, #3a3a3a 60%, #2d2d2d 100%);
+            border-radius: 10px 10px 0 0;
+            margin-bottom: -5px;
             z-index: 1;
         }
 
         .watch-band-bottom {
-            width: 70px;
-            height: 45px;
-            background: linear-gradient(0deg, transparent 0%, #2a2a2a 50%, #1a1a1a 100%);
-            border-radius: 0 0 12px 12px;
-            margin-top: -8px;
+            width: 60px;
+            height: 40px;
+            background: linear-gradient(0deg, transparent 0%, #3a3a3a 60%, #2d2d2d 100%);
+            border-radius: 0 0 10px 10px;
+            margin-top: -5px;
             z-index: 1;
         }
 
@@ -592,76 +592,11 @@
             z-index: 2;
         }
 
-        /* Crown (top button - rotating dial) */
-        .watch-crown {
-            position: absolute;
-            right: 8px;
-            top: 50%;
-            transform: translateY(-80%);
-            width: 10px;
-            height: 35px;
-            background: linear-gradient(90deg, #1a1a1a 0%, #3d3d3d 20%, #4a4a4a 50%, #3d3d3d 80%, #2a2a2a 100%);
-            border-radius: 2px 4px 4px 2px;
-            box-shadow: 
-                2px 0 4px rgba(0,0,0,0.6),
-                inset 0 1px 0 rgba(255,255,255,0.1);
-        }
-
-        /* Crown ridges for grip texture */
-        .watch-crown::before {
-            content: '';
-            position: absolute;
-            top: 4px;
-            left: 2px;
-            right: 2px;
-            bottom: 4px;
-            background: repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 2px,
-                rgba(0,0,0,0.3) 2px,
-                rgba(0,0,0,0.3) 4px
-            );
-            border-radius: 1px;
-        }
-
-        /* Push button (bottom - smaller, rounder) */
-        .watch-push-button {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(20%);
-            width: 8px;
-            height: 20px;
-            background: linear-gradient(90deg, #1a1a1a 0%, #3d3d3d 20%, #4a4a4a 50%, #3d3d3d 80%, #2a2a2a 100%);
-            border-radius: 2px 6px 6px 2px;
-            box-shadow: 
-                2px 0 4px rgba(0,0,0,0.6),
-                inset 0 1px 0 rgba(255,255,255,0.1);
-        }
-
         .watch-screen-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
+            width: 280px;
+            height: auto;
             display: block;
-        }
-
-        /* Watch bezel frame */
-        .watch-bezel {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 50%;
-            border: 12px solid #2d2d2d;
-            box-shadow: 
-                inset 0 2px 4px rgba(0,0,0,0.5),
-                inset 0 -1px 2px rgba(255,255,255,0.05),
-                0 30px 70px rgba(0, 0, 0, 0.6);
-            pointer-events: none;
+            filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
         }
 
         /* Watch Section */
@@ -746,29 +681,12 @@
             }
 
             .watch-band-top, .watch-band-bottom {
-                width: 55px;
-                height: 35px;
+                width: 50px;
+                height: 30px;
             }
 
             .watch-screen-image {
-                width: 240px;
-                height: 240px;
-            }
-
-            .watch-bezel {
-                border-width: 10px;
-            }
-
-            .watch-crown {
-                right: 6px;
-                height: 28px;
-                width: 8px;
-            }
-
-            .watch-push-button {
-                right: 8px;
-                height: 16px;
-                width: 6px;
+                width: 220px;
             }
 
             .watch-features {
@@ -1551,10 +1469,7 @@
                 <div class="watch-container">
                     <div class="watch-band-top"></div>
                     <div class="watch-body">
-                        <div class="watch-crown"></div>
-                        <div class="watch-push-button"></div>
                         <img src="watch-screenshot.png" alt="GroqBoard on Wear OS" class="watch-screen-image">
-                        <div class="watch-bezel"></div>
                     </div>
                     <div class="watch-band-bottom"></div>
                 </div>
