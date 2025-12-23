@@ -590,13 +590,17 @@
         .watch-body {
             position: relative;
             z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         /* Crown (top button - rotating dial) */
         .watch-crown {
             position: absolute;
-            right: -10px;
-            top: 85px;
+            right: -12px;
+            top: 50%;
+            margin-top: -45px;
             width: 10px;
             height: 35px;
             background: linear-gradient(90deg, #1a1a1a 0%, #3d3d3d 20%, #4a4a4a 50%, #3d3d3d 80%, #2a2a2a 100%);
@@ -627,8 +631,9 @@
         /* Push button (bottom - smaller, rounder) */
         .watch-push-button {
             position: absolute;
-            right: -8px;
-            top: 135px;
+            right: -10px;
+            top: 50%;
+            margin-top: 5px;
             width: 8px;
             height: 20px;
             background: linear-gradient(90deg, #1a1a1a 0%, #3d3d3d 20%, #4a4a4a 50%, #3d3d3d 80%, #2a2a2a 100%);
@@ -736,17 +741,17 @@
             }
 
             .watch-crown {
-                top: 68px;
+                margin-top: -36px;
                 height: 28px;
                 width: 8px;
-                right: -8px;
+                right: -10px;
             }
 
             .watch-push-button {
-                top: 108px;
+                margin-top: 4px;
                 height: 16px;
                 width: 6px;
-                right: -6px;
+                right: -8px;
             }
 
             .watch-features {
