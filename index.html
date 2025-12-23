@@ -995,11 +995,10 @@
         }
 
         .screenshot-item {
-            width: 280px;
             flex-shrink: 0;
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
         }
@@ -1009,9 +1008,41 @@
         }
 
         .screenshot-item img {
+            display: block;
+        }
+
+        /* Phone screenshots (tall) */
+        .screenshot-item.phone {
+            width: 140px;
+        }
+
+        .screenshot-item.phone img {
             width: 100%;
             height: auto;
-            display: block;
+        }
+
+        /* Keyboard screenshot (wide/landscape) */
+        .screenshot-item.keyboard {
+            width: auto;
+            height: 200px;
+        }
+
+        .screenshot-item.keyboard img {
+            height: 100%;
+            width: auto;
+        }
+
+        /* Watch screenshot (square) */
+        .screenshot-item.watch {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+
+        .screenshot-item.watch img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         /* How It Works Section */
@@ -1399,13 +1430,13 @@
         }
     </style>
 </head>
-<body>
+<body id="top">
     <div class="bg-pattern"></div>
     <div class="noise-overlay"></div>
 
     <!-- Navigation -->
     <nav>
-        <a href="#" class="logo">
+        <a href="#top" class="logo">
             <div class="logo-icon"><img src="https://play-lh.googleusercontent.com/vUOMqqK6EwJV11uak0phYo5sMmTLYl2fB1Joh_SaLukbKyA13CFMbYGrp24RzTgiArwp1nL8GhItWpkclGwsIg=w240-h480" alt="GroqBoard"></div>
             <span class="logo-text">GroqBoard</span>
         </a>
@@ -1440,7 +1471,7 @@
                         </svg>
                         Download on Google Play
                     </a>
-                    <a href="#how-it-works" class="btn-secondary">
+                    <a href="#features" class="btn-secondary">
                         Learn More →
                     </a>
                 </div>
@@ -1630,42 +1661,34 @@
             <h2 class="section-title">Beautiful. Simple. Powerful.</h2>
         </div>
         <div class="screenshots-track">
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/zDDonQv6r7qrcKVtITinWhtXjE_fncg_RTEnYvp_05OtbcA3ST7S5dVDHJ7mkbSPhAR41vhKQwWKngkXCLL8=w526-h296" alt="GroqBoard Screenshot 1">
+            <!-- Phone screenshot 1 - Keyboard in action -->
+            <div class="screenshot-item phone">
+                <img src="screenshot1.jpg" alt="GroqBoard Voice Keyboard">
             </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/euB3QvuSDzcwGU9GNzGfOTwsHzRvcvE0zaJ_VcBBISYBhwktCVMOwe9tBCp_FQYrBjm-DJJ6vgpKOMUcGML--p8=w526-h296" alt="GroqBoard Screenshot 2">
+            <!-- Phone screenshot 2 - Settings -->
+            <div class="screenshot-item phone">
+                <img src="screenshot2.jpg" alt="GroqBoard Settings">
             </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/e7A3FwQFrXduUL_ZyRjltew5i75siOa-Xx9nAcCDV5FFnir98ALj61Ogph4aGBKWayz01sYPILwp8s5y2GJ3=w526-h296" alt="GroqBoard Screenshot 3">
+            <!-- Keyboard screenshot (landscape) -->
+            <div class="screenshot-item keyboard">
+                <img src="screenshot3.png" alt="GroqBoard Keyboard Layout">
             </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/79b5Kuoia7M8bCsqZYZujbjgOyHBIHnxT-PcUWnSKkV0d5AOJa76mAl7sKBu2Un9ImiOthuHNSQgBZ4uM2cQ=w526-h296" alt="GroqBoard Screenshot 4">
-            </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/8Q31XIdTvVK44-sdzuDGSWvhOw10haiZpLgIRg3nDFIr6xw6xJtjE-QV3zYwVev8b_0sW6_loi-a1pQClaNMEA=w526-h296" alt="GroqBoard Screenshot 5">
-            </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/qLkzFPLYgq7c5uTMYI4-hz6gexNwkMMXbR7Dn0EQBSlisCSNhkzsKw5dbvzHraYXTMBsOMrS6A4GxJQaOR-8nw=w526-h296" alt="GroqBoard Screenshot 6">
+            <!-- Watch screenshot (circular) -->
+            <div class="screenshot-item watch">
+                <img src="screenshot-watch.png" alt="GroqBoard on Wear OS">
             </div>
             <!-- Duplicate for seamless loop -->
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/zDDonQv6r7qrcKVtITinWhtXjE_fncg_RTEnYvp_05OtbcA3ST7S5dVDHJ7mkbSPhAR41vhKQwWKngkXCLL8=w526-h296" alt="GroqBoard Screenshot 1">
+            <div class="screenshot-item phone">
+                <img src="screenshot1.jpg" alt="GroqBoard Voice Keyboard">
             </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/euB3QvuSDzcwGU9GNzGfOTwsHzRvcvE0zaJ_VcBBISYBhwktCVMOwe9tBCp_FQYrBjm-DJJ6vgpKOMUcGML--p8=w526-h296" alt="GroqBoard Screenshot 2">
+            <div class="screenshot-item phone">
+                <img src="screenshot2.jpg" alt="GroqBoard Settings">
             </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/e7A3FwQFrXduUL_ZyRjltew5i75siOa-Xx9nAcCDV5FFnir98ALj61Ogph4aGBKWayz01sYPILwp8s5y2GJ3=w526-h296" alt="GroqBoard Screenshot 3">
+            <div class="screenshot-item keyboard">
+                <img src="screenshot3.png" alt="GroqBoard Keyboard Layout">
             </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/79b5Kuoia7M8bCsqZYZujbjgOyHBIHnxT-PcUWnSKkV0d5AOJa76mAl7sKBu2Un9ImiOthuHNSQgBZ4uM2cQ=w526-h296" alt="GroqBoard Screenshot 4">
-            </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/8Q31XIdTvVK44-sdzuDGSWvhOw10haiZpLgIRg3nDFIr6xw6xJtjE-QV3zYwVev8b_0sW6_loi-a1pQClaNMEA=w526-h296" alt="GroqBoard Screenshot 5">
-            </div>
-            <div class="screenshot-item">
-                <img src="https://play-lh.googleusercontent.com/qLkzFPLYgq7c5uTMYI4-hz6gexNwkMMXbR7Dn0EQBSlisCSNhkzsKw5dbvzHraYXTMBsOMrS6A4GxJQaOR-8nw=w526-h296" alt="GroqBoard Screenshot 6">
+            <div class="screenshot-item watch">
+                <img src="screenshot-watch.png" alt="GroqBoard on Wear OS">
             </div>
         </div>
     </section>
