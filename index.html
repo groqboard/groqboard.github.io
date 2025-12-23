@@ -561,7 +561,7 @@
             50% { transform: translateY(-15px); }
         }
 
-        /* Watch Mockup - Simple approach using the screenshot as-is */
+        /* Watch Mockup - Stylish design with adjustable positioning */
         .watch-container {
             position: relative;
             display: flex;
@@ -569,34 +569,132 @@
             align-items: center;
         }
 
+        /* === WATCH BANDS === */
         .watch-band-top {
-            width: 60px;
-            height: 40px;
-            background: linear-gradient(180deg, transparent 0%, #3a3a3a 60%, #2d2d2d 100%);
-            border-radius: 10px 10px 0 0;
-            margin-bottom: -5px;
+            width: 65px;
+            height: 50px;
+            background: linear-gradient(180deg, 
+                transparent 0%, 
+                #1a1a1a 30%,
+                #2a2a2a 60%, 
+                #333 100%
+            );
+            border-radius: 8px 8px 0 0;
+            margin-bottom: -12px;
             z-index: 1;
         }
 
         .watch-band-bottom {
-            width: 60px;
-            height: 40px;
-            background: linear-gradient(0deg, transparent 0%, #3a3a3a 60%, #2d2d2d 100%);
-            border-radius: 0 0 10px 10px;
-            margin-top: -5px;
+            width: 65px;
+            height: 50px;
+            background: linear-gradient(0deg, 
+                transparent 0%, 
+                #1a1a1a 30%,
+                #2a2a2a 60%, 
+                #333 100%
+            );
+            border-radius: 0 0 8px 8px;
+            margin-top: -12px;
             z-index: 1;
         }
 
+        /* === WATCH BODY (contains image and buttons) === */
         .watch-body {
             position: relative;
             z-index: 2;
         }
 
+        /* === WATCH CASE/FRAME ===
+           This creates the rounded watch housing
+           ADJUST: width/height to match your image size + padding
+        */
+        .watch-case {
+            width: 310px;                /* Should be image width + (padding * 2) */
+            height: 310px;               /* Should be image height + (padding * 2) */
+            background: linear-gradient(145deg, #3a3a3a 0%, #2a2a2a 50%, #1f1f1f 100%);
+            border-radius: 50%;
+            padding: 10px;               /* PADDING: space between frame and screen */
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.6),
+                inset 0 2px 3px rgba(255,255,255,0.1),
+                inset 0 -2px 3px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* === WATCH SCREEN IMAGE === 
+           ADJUST THESE VALUES TO POSITION THE IMAGE:
+           - width: size of the image
+           - margin-left: move left (negative) or right (positive)
+           - margin-top: move up (negative) or down (positive)
+        */
         .watch-screen-image {
-            width: 280px;
-            height: auto;
+            width: 290px;                /* SIZE: change this to make bigger/smaller */
+            height: 290px;               /* Keep same as width for circle */
+            object-fit: cover;
             display: block;
-            filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+            border-radius: 50%;
+            margin-left: 0px;            /* HORIZONTAL: negative = left, positive = right */
+            margin-top: 0px;             /* VERTICAL: negative = up, positive = down */
+        }
+
+        /* === CROWN (top rotating button) === 
+           ADJUST: right, top values to position
+        */
+        .watch-crown {
+            position: absolute;
+            right: -6px;                 /* HORIZONTAL position from right edge */
+            top: 95px;                   /* VERTICAL position from top */
+            width: 8px;
+            height: 32px;
+            background: linear-gradient(90deg, 
+                #1a1a1a 0%, 
+                #3a3a3a 30%, 
+                #4a4a4a 50%, 
+                #3a3a3a 70%, 
+                #1a1a1a 100%
+            );
+            border-radius: 0 4px 4px 0;
+            box-shadow: 2px 0 6px rgba(0,0,0,0.5);
+        }
+
+        /* Crown grip texture */
+        .watch-crown::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 1px;
+            right: 1px;
+            bottom: 3px;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.4) 2px,
+                rgba(0,0,0,0.4) 4px
+            );
+            border-radius: 1px;
+        }
+
+        /* === PUSH BUTTON (bottom smaller button) ===
+           ADJUST: right, top values to position
+        */
+        .watch-push-button {
+            position: absolute;
+            right: -4px;                 /* HORIZONTAL position from right edge */
+            top: 145px;                  /* VERTICAL position from top */
+            width: 6px;
+            height: 18px;
+            background: linear-gradient(90deg, 
+                #1a1a1a 0%, 
+                #3a3a3a 30%, 
+                #4a4a4a 50%, 
+                #3a3a3a 70%, 
+                #1a1a1a 100%
+            );
+            border-radius: 0 4px 4px 0;
+            box-shadow: 2px 0 6px rgba(0,0,0,0.5);
         }
 
         /* Watch Section */
@@ -682,11 +780,30 @@
 
             .watch-band-top, .watch-band-bottom {
                 width: 50px;
-                height: 30px;
+                height: 40px;
+            }
+
+            .watch-case {
+                width: 250px;
+                height: 250px;
+                padding: 8px;
             }
 
             .watch-screen-image {
-                width: 220px;
+                width: 234px;
+                height: 234px;
+            }
+
+            .watch-crown {
+                right: -4px;
+                top: 75px;
+                height: 26px;
+            }
+
+            .watch-push-button {
+                right: -2px;
+                top: 115px;
+                height: 14px;
             }
 
             .watch-features {
@@ -1469,7 +1586,11 @@
                 <div class="watch-container">
                     <div class="watch-band-top"></div>
                     <div class="watch-body">
-                        <img src="watch-screenshot.png" alt="GroqBoard on Wear OS" class="watch-screen-image">
+                        <div class="watch-crown"></div>
+                        <div class="watch-push-button"></div>
+                        <div class="watch-case">
+                            <img src="watch-screenshot.png" alt="GroqBoard on Wear OS" class="watch-screen-image">
+                        </div>
                     </div>
                     <div class="watch-band-bottom"></div>
                 </div>
