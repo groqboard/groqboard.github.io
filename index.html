@@ -1373,6 +1373,11 @@
                 padding: 2rem;
             }
 
+            .privacy-list {
+                text-align: left;
+                display: inline-block;
+            }
+
             .privacy-icon {
                 order: -1;
             }
@@ -1428,6 +1433,43 @@
                 display: block;
             }
         }
+        /* Language Selector (in footer) */
+        .lang-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .lang-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-right: 0.5rem;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--groq-orange);
+            color: var(--text-primary);
+        }
+
+        .lang-btn.active {
+            background: var(--groq-orange);
+            border-color: var(--groq-orange);
+            color: white;
+        }
     </style>
 </head>
 <body id="top">
@@ -1441,12 +1483,12 @@
             <span class="logo-text">GroqBoard</span>
         </a>
         <ul class="nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#privacy">Privacy</a></li>
-            <li><a href="mailto:alegol@gmail.com?subject=GroqBoard%20Support">Contact</a></li>
+            <li><a href="#features" data-en="Features" data-es="Funciones">Features</a></li>
+            <li><a href="#how-it-works" data-en="How It Works" data-es="Cómo Funciona">How It Works</a></li>
+            <li><a href="#privacy" data-en="Privacy" data-es="Privacidad">Privacy</a></li>
+            <li><a href="mailto:alegol@gmail.com?subject=GroqBoard%20Support" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
-        <a href="https://play.google.com/store/apps/details?id=com.alegol.groqboard" class="nav-cta" target="_blank">Get the App</a>
+        <a href="https://play.google.com/store/apps/details?id=com.alegol.groqboard" class="nav-cta" target="_blank" data-en="Get the App" data-es="Descargar">Get the App</a>
         <button class="mobile-menu-btn">☰</button>
     </nav>
 
@@ -1455,13 +1497,13 @@
         <div class="hero-content">
             <div class="hero-text">
                 <div class="hero-badge">
-                    <span>⚡</span> Powered by Groq Whisper AI
+                    <span>⚡</span> <span data-en="Powered by Groq Whisper AI" data-es="Impulsado por Groq Whisper AI">Powered by Groq Whisper AI</span>
                 </div>
                 <h1>
-                    Voice Typing.<br>
-                    <span class="gradient-text">Lightning Fast.</span>
+                    <span data-en="Voice Typing." data-es="Dictado por Voz.">Voice Typing.</span><br>
+                    <span class="gradient-text" data-en="Lightning Fast." data-es="Ultra Rápido.">Lightning Fast.</span>
                 </h1>
-                <p class="hero-description">
+                <p class="hero-description" data-en="Transform your typing with GroqBoard. Speak naturally and watch your words appear in real time. Bilingual. Accurate. Private." data-es="Transforma tu escritura con GroqBoard. Habla naturalmente y mira tus palabras aparecer en tiempo real. Bilingüe. Preciso. Privado.">
                     Transform your typing with GroqBoard. Speak naturally and watch your words appear in real time. Bilingual. Accurate. Private.
                 </p>
                 <div class="hero-buttons">
@@ -1469,17 +1511,17 @@
                         <svg viewBox="0 0 24 24" fill="currentColor">
                             <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
                         </svg>
-                        Download on Google Play
+                        <span data-en="Download on Google Play" data-es="Descargar en Google Play">Download on Google Play</span>
                     </a>
-                    <a href="#features" class="btn-secondary">
+                    <a href="#features" class="btn-secondary" data-en="Learn More →" data-es="Saber Más →">
                         Learn More →
                     </a>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="floating-badge top-left">🎙️ Voice to Text</div>
-                <div class="floating-badge top-right">⚡ Lightning Fast</div>
-                <div class="floating-badge bottom-right">🔒 Privacy First</div>
+                <div class="floating-badge top-left" data-en="🎙️ Voice to Text" data-es="🎙️ Voz a Texto">🎙️ Voice to Text</div>
+                <div class="floating-badge top-right" data-en="⚡ Lightning Fast" data-es="⚡ Ultra Rápido">⚡ Lightning Fast</div>
+                <div class="floating-badge bottom-right" data-en="🔒 Privacy First" data-es="🔒 Privacidad Primero">🔒 Privacy First</div>
                 
                 <div class="phone-mockup">
                     <div class="phone-screen">
@@ -1545,11 +1587,11 @@
         <div class="stats-container">
             <div class="stat-item">
                 <div class="stat-number">Whisper Large V3</div>
-                <div class="stat-label">Powered by Groq</div>
+                <div class="stat-label" data-en="Powered by Groq" data-es="Impulsado por Groq">Powered by Groq</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">EN · ES · Auto</div>
-                <div class="stat-label">Language Detection</div>
+                <div class="stat-label" data-en="Language Detection" data-es="Detección de Idioma">Language Detection</div>
             </div>
         </div>
     </section>
@@ -1557,53 +1599,53 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="section-header">
-            <div class="section-label">Features</div>
-            <h2 class="section-title">Everything You Need to Type Faster</h2>
-            <p class="section-description">
+            <div class="section-label" data-en="Features" data-es="Funciones">Features</div>
+            <h2 class="section-title" data-en="Everything You Need to Type Faster" data-es="Todo lo que Necesitas para Escribir Más Rápido">Everything You Need to Type Faster</h2>
+            <p class="section-description" data-en="GroqBoard combines cutting edge AI with a privacy focused design to give you the best voice typing experience on Android." data-es="GroqBoard combina inteligencia artificial de vanguardia con un diseño enfocado en la privacidad para darte la mejor experiencia de dictado por voz en Android.">
                 GroqBoard combines cutting edge AI with a privacy focused design to give you the best voice typing experience on Android.
             </p>
         </div>
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">🎙️</div>
-                <h3 class="feature-title">Instant Voice Typing</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-en="Instant Voice Typing" data-es="Dictado por Voz Instantáneo">Instant Voice Typing</h3>
+                <p class="feature-description" data-en="Tap the microphone and speak naturally. Your words appear as text in real time using Groq's blazing fast Whisper AI technology." data-es="Toca el micrófono y habla naturalmente. Tus palabras aparecen como texto en tiempo real usando la tecnología Whisper AI ultra rápida de Groq.">
                     Tap the microphone and speak naturally. Your words appear as text in real time using Groq's blazing fast Whisper AI technology.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🌐</div>
-                <h3 class="feature-title">Bilingual Support</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-en="Bilingual Support" data-es="Soporte Bilingüe">Bilingual Support</h3>
+                <p class="feature-description" data-en="Seamlessly switch between English and Spanish with one tap. The keyboard automatically optimizes recognition for your selected language." data-es="Cambia entre inglés y español con un solo toque. El teclado optimiza automáticamente el reconocimiento para tu idioma seleccionado.">
                     Seamlessly switch between English and Spanish with one tap. The keyboard automatically optimizes recognition for your selected language.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">📝</div>
-                <h3 class="feature-title">Custom Vocabulary</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-en="Custom Vocabulary" data-es="Vocabulario Personalizado">Custom Vocabulary</h3>
+                <p class="feature-description" data-en="Add your specialized terms, names, or technical jargon. GroqBoard learns your unique vocabulary for superior accuracy." data-es="Agrega tus términos especializados, nombres o jerga técnica. GroqBoard aprende tu vocabulario único para mayor precisión.">
                     Add your specialized terms, names, or technical jargon. GroqBoard learns your unique vocabulary for superior accuracy.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">⚡</div>
-                <h3 class="feature-title">Works Everywhere</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-en="Works Everywhere" data-es="Funciona en Todas Partes">Works Everywhere</h3>
+                <p class="feature-description" data-en="Use voice typing in ANY app. WhatsApp, Gmail, Google Docs, social media, notes. If you can type there, you can speak there." data-es="Usa dictado por voz en CUALQUIER app. WhatsApp, Gmail, Google Docs, redes sociales, notas. Si puedes escribir ahí, puedes hablar ahí.">
                     Use voice typing in ANY app. WhatsApp, Gmail, Google Docs, social media, notes. If you can type there, you can speak there.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🎯</div>
-                <h3 class="feature-title">Smart Shortcuts</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-en="Smart Shortcuts" data-es="Atajos Inteligentes">Smart Shortcuts</h3>
+                <p class="feature-description" data-en="Press delete 5 times to clear all text. Quick punctuation keys for common symbols. Instant keyboard switching button." data-es="Presiona borrar 5 veces para eliminar todo el texto. Teclas rápidas de puntuación para símbolos comunes. Botón de cambio de teclado instantáneo.">
                     Press delete 5 times to clear all text. Quick punctuation keys for common symbols. Instant keyboard switching button.
                 </p>
             </div>
             <div class="feature-card">
-                <div class="new-badge">NEW</div>
+                <div class="new-badge" data-en="NEW" data-es="NUEVO">NEW</div>
                 <div class="feature-icon">⌚</div>
-                <h3 class="feature-title">Wear OS Support</h3>
-                <p class="feature-description">
+                <h3 class="feature-title" data-en="Wear OS Support" data-es="Soporte Wear OS">Wear OS Support</h3>
+                <p class="feature-description" data-en="Dictate from your smartwatch. Your settings sync automatically. Type anywhere, straight from your wrist with a watch optimized UI." data-es="Dicta desde tu smartwatch. Tu configuración se sincroniza automáticamente. Escribe en cualquier lugar, directo desde tu muñeca con una interfaz optimizada para reloj.">
                     Dictate from your smartwatch. Your settings sync automatically. Type anywhere, straight from your wrist with a watch optimized UI.
                 </p>
             </div>
@@ -1627,27 +1669,27 @@
                 </div>
             </div>
             <div class="watch-info">
-                <div class="section-label">NEW FEATURE</div>
-                <h3>Now on Your Wrist</h3>
-                <p>
+                <div class="section-label" data-en="NEW FEATURE" data-es="NUEVA FUNCIÓN">NEW FEATURE</div>
+                <h3 data-en="Now on Your Wrist" data-es="Ahora en Tu Muñeca">Now on Your Wrist</h3>
+                <p data-en="GroqBoard brings the same lightning fast voice typing experience to your Wear OS smartwatch. Reply to messages, take notes, type anywhere... all without reaching for your phone." data-es="GroqBoard lleva la misma experiencia de dictado ultra rápido a tu smartwatch Wear OS. Responde mensajes, toma notas, escribe en cualquier lugar... todo sin sacar tu teléfono.">
                     GroqBoard brings the same lightning fast voice typing experience to your Wear OS smartwatch. Reply to messages, take notes, type anywhere... all without reaching for your phone.
                 </p>
                 <div class="watch-features">
                     <div class="watch-feature">
                         <span class="watch-feature-icon">⌚</span>
-                        <span>Dictate from your watch in any app</span>
+                        <span data-en="Dictate from your watch in any app" data-es="Dicta desde tu reloj en cualquier app">Dictate from your watch in any app</span>
                     </div>
                     <div class="watch-feature">
                         <span class="watch-feature-icon">🔄</span>
-                        <span>Settings sync automatically from your phone</span>
+                        <span data-en="Settings sync automatically from your phone" data-es="Configuración se sincroniza automáticamente desde tu teléfono">Settings sync automatically from your phone</span>
                     </div>
                     <div class="watch-feature">
                         <span class="watch-feature-icon">🎯</span>
-                        <span>Watch optimized circular UI design</span>
+                        <span data-en="Watch optimized circular UI design" data-es="Diseño de interfaz circular optimizado para reloj">Watch optimized circular UI design</span>
                     </div>
                     <div class="watch-feature">
                         <span class="watch-feature-icon">🌐</span>
-                        <span>Full language support including Auto detection</span>
+                        <span data-en="Full language support including Auto detection" data-es="Soporte completo de idiomas incluyendo detección automática">Full language support including Auto detection</span>
                     </div>
                 </div>
             </div>
@@ -1657,8 +1699,8 @@
     <!-- Screenshots Carousel -->
     <section class="screenshots">
         <div class="section-header">
-            <div class="section-label">See It In Action</div>
-            <h2 class="section-title">Beautiful. Simple. Powerful.</h2>
+            <div class="section-label" data-en="See It In Action" data-es="Míralo en Acción">See It In Action</div>
+            <h2 class="section-title" data-en="Beautiful. Simple. Powerful." data-es="Hermoso. Simple. Poderoso.">Beautiful. Simple. Powerful.</h2>
         </div>
         <div class="screenshots-track">
             <!-- Phone screenshot 1 - Keyboard in action -->
@@ -1696,9 +1738,9 @@
     <!-- How It Works Section -->
     <section class="how-it-works" id="how-it-works">
         <div class="section-header">
-            <div class="section-label">Getting Started</div>
-            <h2 class="section-title">Up and Running in Minutes</h2>
-            <p class="section-description">
+            <div class="section-label" data-en="Getting Started" data-es="Cómo Empezar">Getting Started</div>
+            <h2 class="section-title" data-en="Up and Running in Minutes" data-es="Funcionando en Minutos">Up and Running in Minutes</h2>
+            <p class="section-description" data-en="Four simple steps to transform how you type on Android." data-es="Cuatro simples pasos para transformar cómo escribes en Android.">
                 Four simple steps to transform how you type on Android.
             </p>
         </div>
@@ -1707,8 +1749,8 @@
             <div class="step">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h3 class="step-title">Enable GroqBoard</h3>
-                    <p class="step-description">
+                    <h3 class="step-title" data-en="Enable GroqBoard" data-es="Activa GroqBoard">Enable GroqBoard</h3>
+                    <p class="step-description" data-en="Open your Android keyboard settings and enable GroqBoard as an input method. Just takes a few taps." data-es="Abre la configuración de teclado de Android y activa GroqBoard como método de entrada. Solo toma unos toques.">
                         Open your Android keyboard settings and enable GroqBoard as an input method. Just takes a few taps.
                     </p>
                 </div>
@@ -1716,8 +1758,8 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3 class="step-title">Add Your Groq API Key</h3>
-                    <p class="step-description">
+                    <h3 class="step-title" data-en="Add Your Groq API Key" data-es="Agrega Tu Clave API de Groq">Add Your Groq API Key</h3>
+                    <p class="step-description" data-en="Get your free API key at console.groq.com and paste it into the settings. Simple signup, no credit card needed." data-es="Obtén tu clave API gratis en console.groq.com y pégala en la configuración. Registro simple, sin tarjeta de crédito.">
                         Get your free API key at <a href="https://console.groq.com" target="_blank">console.groq.com</a> and paste it into the settings. Simple signup, no credit card needed.
                     </p>
                 </div>
@@ -1725,8 +1767,8 @@
             <div class="step">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h3 class="step-title">Customize Your Vocabulary</h3>
-                    <p class="step-description">
+                    <h3 class="step-title" data-en="Customize Your Vocabulary" data-es="Personaliza Tu Vocabulario">Customize Your Vocabulary</h3>
+                    <p class="step-description" data-en="Optional but powerful. Add names, technical terms, or any specialized words you use frequently for better accuracy." data-es="Opcional pero poderoso. Agrega nombres, términos técnicos o cualquier palabra especializada que uses frecuentemente para mejor precisión.">
                         Optional but powerful. Add names, technical terms, or any specialized words you use frequently for better accuracy.
                     </p>
                 </div>
@@ -1734,8 +1776,8 @@
             <div class="step">
                 <div class="step-number">4</div>
                 <div class="step-content">
-                    <h3 class="step-title">Start Speaking!</h3>
-                    <p class="step-description">
+                    <h3 class="step-title" data-en="Start Speaking!" data-es="¡Empieza a Hablar!">Start Speaking!</h3>
+                    <p class="step-description" data-en="Open any app, switch to GroqBoard, tap the mic button, and watch your voice become text instantly." data-es="Abre cualquier app, cambia a GroqBoard, toca el botón del micrófono, y mira tu voz convertirse en texto instantáneamente.">
                         Open any app, switch to GroqBoard, tap the mic button, and watch your voice become text instantly.
                     </p>
                 </div>
@@ -1748,27 +1790,27 @@
         <div class="privacy-container">
             <div class="privacy-icon">🔒</div>
             <div class="privacy-content">
-                <h3>Privacy First. Always.</h3>
+                <h3 data-en="Privacy First. Always." data-es="Privacidad Primero. Siempre.">Privacy First. Always.</h3>
                 <ul class="privacy-list">
                     <li>
                         <span>✓</span>
-                        Your audio is NEVER stored or collected
+                        <span data-en="Your audio is NEVER stored or collected" data-es="Tu audio NUNCA se almacena ni se recolecta">Your audio is NEVER stored or collected</span>
                     </li>
                     <li>
                         <span>✓</span>
-                        Recordings are processed instantly and deleted
+                        <span data-en="Recordings are processed instantly and deleted" data-es="Las grabaciones se procesan al instante y se eliminan">Recordings are processed instantly and deleted</span>
                     </li>
                     <li>
                         <span>✓</span>
-                        Your API key stays on your device only
+                        <span data-en="Your API key stays on your device only" data-es="Tu clave API permanece solo en tu dispositivo">Your API key stays on your device only</span>
                     </li>
                     <li>
                         <span>✓</span>
-                        No ads, no tracking, no data collection
+                        <span data-en="No ads, no tracking, no data collection" data-es="Sin anuncios, sin rastreo, sin recolección de datos">No ads, no tracking, no data collection</span>
                     </li>
                     <li>
                         <span>✓</span>
-                        No data shared with third parties
+                        <span data-en="No data shared with third parties" data-es="Sin datos compartidos con terceros">No data shared with third parties</span>
                     </li>
                 </ul>
             </div>
@@ -1778,8 +1820,8 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="cta-container">
-            <h2>Ready to Type <span class="gradient-text">Faster</span>?</h2>
-            <p>
+            <h2><span data-en="Ready to Type" data-es="¿Listo para Escribir">Ready to Type</span> <span class="gradient-text" data-en="Faster" data-es="Más Rápido">Faster</span>?</h2>
+            <p data-en="Join thousands of users who've transformed their mobile typing experience. Download GroqBoard today and experience the future of voice input." data-es="Únete a miles de usuarios que han transformado su experiencia de escritura móvil. Descarga GroqBoard hoy y experimenta el futuro del dictado por voz.">
                 Join thousands of users who've transformed their mobile typing experience. Download GroqBoard today and experience the future of voice input.
             </p>
             <div class="cta-buttons">
@@ -1788,7 +1830,7 @@
                         <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
                     </svg>
                     <div class="btn-text">
-                        <span>GET IT ON</span>
+                        <span data-en="GET IT ON" data-es="DISPONIBLE EN">GET IT ON</span>
                         <span>Google Play</span>
                     </div>
                 </a>
@@ -1804,17 +1846,22 @@
                     <div class="footer-logo-icon"><img src="https://play-lh.googleusercontent.com/vUOMqqK6EwJV11uak0phYo5sMmTLYl2fB1Joh_SaLukbKyA13CFMbYGrp24RzTgiArwp1nL8GhItWpkclGwsIg=w240-h480" alt="GroqBoard"></div>
                     <span class="footer-logo-text">GroqBoard</span>
                 </div>
-                <p class="footer-credit">Created by Alex Goldberg</p>
-                <p class="footer-credit">Version 2.0</p>
+                <p class="footer-credit" data-en="Created by Alex Goldberg" data-es="Creado por Alex Goldberg">Created by Alex Goldberg</p>
+                <p class="footer-credit" data-en="Version 2.0" data-es="Versión 2.0">Version 2.0</p>
             </div>
             <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="mailto:alegol@gmail.com?subject=GroqBoard%20Support">Support</a>
-                <a href="https://console.groq.com" target="_blank">Get API Key</a>
+                <a href="privacy.html" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a>
+                <a href="mailto:alegol@gmail.com?subject=GroqBoard%20Support" data-en="Support" data-es="Soporte">Support</a>
+                <a href="https://console.groq.com" target="_blank" data-en="Get API Key" data-es="Obtener Clave API">Get API Key</a>
+            </div>
+            <div class="lang-selector">
+                <span class="lang-label" data-en="Language:" data-es="Idioma:">Language:</span>
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 GroqBoard. All rights reserved. Android is a trademark of Google LLC.</p>
+            <p data-en="© 2025 GroqBoard. All rights reserved. Android is a trademark of Google LLC." data-es="© 2025 GroqBoard. Todos los derechos reservados. Android es una marca registrada de Google LLC.">© 2025 GroqBoard. All rights reserved. Android is a trademark of Google LLC.</p>
         </div>
     </footer>
 
@@ -1835,10 +1882,15 @@
 
         // Typing animation for the transcription preview
         const transcriptionText = document.querySelector('.transcription-text');
-        const fullText = "Hey, don't forget to pick up groceries on your way home";
+        const texts = {
+            en: "Hey, don't forget to pick up groceries on your way home",
+            es: "Oye, no olvides pasar por las compras de camino a casa"
+        };
         let charIndex = 0;
+        let currentAnimLang = localStorage.getItem('groqboard-lang') || 'en';
 
         function typeText() {
+            const fullText = texts[currentAnimLang] || texts.en;
             if (charIndex <= fullText.length) {
                 transcriptionText.innerHTML = fullText.substring(0, charIndex) + '<span class="transcription-cursor"></span>';
                 charIndex++;
@@ -1847,6 +1899,7 @@
                 // Reset after a pause
                 setTimeout(() => {
                     charIndex = 0;
+                    currentAnimLang = localStorage.getItem('groqboard-lang') || 'en';
                     typeText();
                 }, 3000);
             }
@@ -1905,6 +1958,65 @@
                 screenshotsTrack.style.animationPlayState = 'running';
             });
         }
+
+        // Language Switching
+        let currentLang = localStorage.getItem('groqboard-lang') || 'en';
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('groqboard-lang', lang);
+            
+            // Update all elements with data-en and data-es attributes
+            document.querySelectorAll('[data-en][data-es]').forEach(el => {
+                const text = el.getAttribute(`data-${lang}`);
+                if (text) {
+                    // Check if element contains links or other important children
+                    const hasLinks = el.querySelector('a');
+                    
+                    if (hasLinks) {
+                        // Element has links - just replace the text, preserving structure isn't needed
+                        // since the Spanish version should be complete text
+                        el.innerHTML = text;
+                    } else if (el.childNodes.length === 1 && el.childNodes[0].nodeType === Node.TEXT_NODE) {
+                        el.textContent = text;
+                    } else if (el.children.length === 0) {
+                        el.textContent = text;
+                    } else {
+                        // For other cases, try to set textContent if safe
+                        const hasOnlyTextAndSpans = Array.from(el.childNodes).every(node => 
+                            node.nodeType === Node.TEXT_NODE || 
+                            (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'SPAN')
+                        );
+                        if (hasOnlyTextAndSpans) {
+                            el.textContent = text;
+                        }
+                    }
+                }
+            });
+            
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+        }
+        
+        // Language button click handlers
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = btn.getAttribute('data-lang');
+                setLanguage(lang);
+            });
+        });
+        
+        // Set initial language on page load
+        setLanguage(currentLang);
     </script>
 </body>
 </html>
