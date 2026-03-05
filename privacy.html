@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - GroqBoard</title>
+    <meta name="description" content="Privacy Policy for GroqBoard - AI Voice Keyboard for Android">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --groq-orange: #f55036;
+            --groq-orange-light: #ff6b4a;
+            --bg-dark: #0a0a0a;
+            --bg-card: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.8);
+            border-bottom: 1px solid rgba(245, 80, 54, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-cta {
+            background: var(--groq-orange);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(245, 80, 54, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(245, 80, 54, 0.4);
+            background: var(--groq-orange-light);
+        }
+
+        /* Main Content */
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .privacy-header p {
+            color: var(--text-secondary);
+        }
+
+        .privacy-content {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .privacy-content h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--groq-orange);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .privacy-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .privacy-content ul {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .privacy-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-content strong {
+            color: var(--text-primary);
+        }
+
+        .privacy-content a {
+            color: var(--groq-orange);
+            text-decoration: none;
+        }
+
+        .privacy-content a:hover {
+            text-decoration: underline;
+        }
+
+        .effective-date {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--groq-orange);
+        }
+
+        .footer-credit {
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .privacy-container {
+                padding: 6rem 1rem 2rem;
+            }
+
+            .privacy-content {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-icon"><img src="https://play-lh.googleusercontent.com/vUOMqqK6EwJV11uak0phYo5sMmTLYl2fB1Joh_SaLukbKyA13CFMbYGrp24RzTgiArwp1nL8GhItWpkclGwsIg=w240-h480" alt="GroqBoard"></div>
+            <span class="logo-text">GroqBoard</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.alegol.groqboard" class="nav-cta" target="_blank">Get the App</a>
+    </nav>
+
+    <!-- Privacy Policy Content -->
+    <div class="privacy-container">
+        <div class="privacy-header">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: January 4, 2025</p>
+        </div>
+
+        <div class="privacy-content">
+            <p>This privacy policy applies to the GroqBoard app (hereby referred to as "Application") for mobile devices that was created by Alex Goldberg (hereby referred to as "Service Provider") as a Free service. This service is intended for use "AS IS".</p>
+
+            <h2>Information Collection and Use</h2>
+            <p>The Application collects information when you download and use it. This information may include information such as:</p>
+            <ul>
+                <li>Your device's Internet Protocol address (e.g. IP address)</li>
+                <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
+                <li>The time spent on the Application</li>
+                <li>The operating system you use on your mobile device</li>
+            </ul>
+
+            <h2>Microphone Permission</h2>
+            <p>The Application requires access to your device's microphone to provide its core functionality as a voice-powered keyboard. Here's how we use this permission:</p>
+            <ul>
+                <li><strong>Voice Recording:</strong> When you tap the microphone button on the keyboard, the Application temporarily records your voice to convert speech to text.</li>
+                <li><strong>Processing:</strong> Audio recordings are immediately sent to the Groq API service for transcription using the Whisper model. The audio is processed in real-time and converted to text.</li>
+                <li><strong>No Storage:</strong> The Application does NOT store any audio recordings on your device beyond the temporary file needed for processing. Once transcription is complete, the temporary audio file is deleted.</li>
+                <li><strong>No Collection:</strong> We do NOT collect, save, or transmit your audio recordings to any servers owned by the Service Provider. All processing is done through the Groq API service based on your provided API key.</li>
+                <li><strong>User Control:</strong> Microphone access only occurs when you actively press the microphone button. The Application never records audio in the background or without your explicit action.</li>
+            </ul>
+
+            <p>The Application does not gather precise information about the location of your mobile device.</p>
+
+            <p>The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.</p>
+
+            <p>For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information, including but not limited to your Groq API key (stored locally on your device only) and custom vocabulary terms (stored locally on your device only). The information that the Service Provider requests will be retained on your device and is not collected by the Service Provider in any way.</p>
+
+            <h2>Third Party Access</h2>
+            <p>The Application uses the Groq API service for speech transcription. When you use the voice input feature:</p>
+            <ul>
+                <li>Your audio recording is sent directly to Groq's servers using your personal API key</li>
+                <li>Groq processes the audio according to their own privacy policy and terms of service</li>
+                <li>The Service Provider does not have access to your audio data or transcriptions</li>
+                <li>You should review Groq's privacy policy at <a href="https://console.groq.com" target="_blank">console.groq.com</a> for information about how they handle data</li>
+            </ul>
+
+            <p>The Service Provider may disclose User Provided and Automatically Collected Information:</p>
+            <ul>
+                <li>As required by law, such as to comply with a subpoena, or similar legal process;</li>
+                <li>When they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
+                <li>With their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+            </ul>
+
+            <h2>Opt-Out Rights</h2>
+            <p>You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network. You can also revoke microphone permission at any time through your device's settings.</p>
+
+            <h2>Data Retention Policy</h2>
+            <p>The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at <a href="mailto:alegol@gmail.com">alegol@gmail.com</a> and they will respond in a reasonable time. Note that your API key and custom vocabulary are stored only on your device and can be cleared by uninstalling the app or clearing app data.</p>
+
+            <h2>Children</h2>
+            <p>The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</p>
+            <p>The Service Provider does not knowingly collect personally identifiable information from children. The Service Provider encourages all children to never submit any personally identifiable information through the Application and/or Services. The Service Provider encourage parents and legal guardians to monitor their children's Internet usage and to help enforce this Policy by instructing their children never to provide personally identifiable information through the Application and/or Services without their permission. If you have reason to believe that a child has provided personally identifiable information to the Service Provider through the Application and/or Services, please contact the Service Provider (<a href="mailto:alegol@gmail.com">alegol@gmail.com</a>) so that they will be able to take the necessary actions. You must also be at least 16 years of age to consent to the processing of your personally identifiable information in your country (in some countries we may allow your parent or guardian to do so on your behalf).</p>
+
+            <h2>Security</h2>
+            <p>The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains. Your Groq API key is stored locally on your device using Android's SharedPreferences and is never transmitted to the Service Provider's servers.</p>
+
+            <h2>Changes</h2>
+            <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
+
+            <h2>Your Consent</h2>
+            <p>By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at <a href="mailto:alegol@gmail.com">alegol@gmail.com</a>.</p>
+
+            <p class="effective-date">This privacy policy is effective as of January 4, 2025</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="mailto:alegol@gmail.com?subject=GroqBoard%20Support">Support</a>
+            <a href="https://play.google.com/store/apps/details?id=com.alegol.groqboard" target="_blank">Google Play</a>
+        </div>
+        <p class="footer-credit">© 2025 GroqBoard by Alex Goldberg</p>
+    </footer>
+</body>
+</html>
