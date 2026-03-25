@@ -906,17 +906,17 @@
         }
 
         .features-grid {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
         }
 
         .feature-card {
             background: var(--bg-card);
             border-radius: 24px;
-            padding: 2rem;
+            padding: 1.5rem;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.4s ease;
             position: relative;
@@ -947,27 +947,27 @@
         }
 
         .feature-icon {
-            width: 60px;
-            height: 60px;
+            width: 48px;
+            height: 48px;
             background: rgba(245, 80, 54, 0.1);
-            border-radius: 16px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
         .feature-title {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .feature-description {
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.88rem;
+            line-height: 1.5;
         }
 
         /* NEW Badge for Wear OS */
@@ -996,13 +996,23 @@
         .screenshots-track {
             display: flex;
             gap: 1.5rem;
-            animation: scroll 30s linear infinite;
-            width: max-content;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 1rem 0 2rem;
+            scrollbar-width: none;
+            cursor: grab;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        .screenshots-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .screenshots-track.dragging {
+            cursor: grabbing;
+            scroll-snap-type: none;
         }
 
         .screenshot-item {
@@ -1012,6 +1022,7 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
+            scroll-snap-align: center;
         }
 
         .screenshot-item:hover {
@@ -1024,7 +1035,7 @@
 
         /* Phone screenshots (tall) */
         .screenshot-item.phone {
-            width: 140px;
+            width: 160px;
         }
 
         .screenshot-item.phone img {
@@ -1035,7 +1046,7 @@
         /* Keyboard screenshot (wide/landscape) */
         .screenshot-item.keyboard {
             width: auto;
-            height: 200px;
+            height: 220px;
         }
 
         .screenshot-item.keyboard img {
@@ -1045,8 +1056,8 @@
 
         /* Watch screenshot (square) */
         .screenshot-item.watch {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
         }
 
@@ -1054,6 +1065,14 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .screenshots-track {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
         }
 
         /* How It Works Section */
@@ -1356,10 +1375,6 @@
                 display: none;
             }
 
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .stats-container {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1644,97 +1659,75 @@
         <div class="features-grid">
             <div class="feature-card">
                 <div class="feature-icon">🎙️</div>
-                <h3 class="feature-title" data-en="Instant Voice Typing" data-es="Dictado por Voz Instantáneo">Instant Voice Typing</h3>
-                <p class="feature-description" data-en="Tap the microphone and speak naturally. Your words appear as text in real time using Groq's blazing fast Whisper AI technology." data-es="Toca el micrófono y habla naturalmente. Tus palabras aparecen como texto en tiempo real usando la tecnología Whisper AI ultra rápida de Groq.">
-                    Tap the microphone and speak naturally. Your words appear as text in real time using Groq's blazing fast Whisper AI technology.
+                <h3 class="feature-title" data-en="Instant Voice Typing" data-es="Dictado por Voz">Instant Voice Typing</h3>
+                <p class="feature-description" data-en="Tap the mic and speak. Your words appear as text in real time, powered by Groq's Whisper AI." data-es="Toca el micrófono y habla. Tus palabras aparecen como texto en tiempo real con Whisper AI de Groq.">
+                    Tap the mic and speak. Your words appear as text in real time, powered by Groq's Whisper AI.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🌐</div>
-                <h3 class="feature-title" data-en="8 Language Support" data-es="Soporte en 8 Idiomas">8 Language Support</h3>
-                <p class="feature-description" data-en="Supports English, Spanish, Portuguese, French, German, Italian, Dutch, and auto-detection. Set two favorites directly on the keyboard for instant one-tap switching. All eight languages available in Settings." data-es="Compatible con inglés, español, portugués, francés, alemán, italiano, neerlandés y detección automática. Configura dos favoritos directamente en el teclado para cambiar con un toque. Los ocho idiomas disponibles en Configuración.">
-                    Supports English, Spanish, Portuguese, French, German, Italian, Dutch, and auto-detection. Set two favorites directly on the keyboard for instant one-tap switching. All eight languages available in Settings.
+                <h3 class="feature-title" data-en="8 Languages" data-es="8 Idiomas">8 Languages</h3>
+                <p class="feature-description" data-en="EN, ES, PT, FR, DE, IT, NL + auto-detect. Set two favorites on the keyboard for instant one-tap switching." data-es="EN, ES, PT, FR, DE, IT, NL + autodetección. Configura dos favoritos en el teclado para cambiar con un toque.">
+                    EN, ES, PT, FR, DE, IT, NL + auto-detect. Set two favorites on the keyboard for instant one-tap switching.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="new-badge" data-en="NEW" data-es="NUEVO">NEW</div>
                 <div class="feature-icon">✨</div>
                 <h3 class="feature-title" data-en="AI Voice Editing" data-es="Edición por Voz con IA">AI Voice Editing</h3>
-                <p class="feature-description" data-en="Tap the magic wand and edit text with voice commands. Say &quot;replace X with Y&quot;, &quot;make this more formal&quot;, or &quot;fix the grammar&quot; and GroqBoard rewrites instantly using Groq's LLM models." data-es="Toca la varita mágica y edita texto con comandos de voz. Di &quot;reemplaza X por Y&quot;, &quot;hazlo más formal&quot; o &quot;corrige la gramática&quot; y GroqBoard lo reescribe al instante con los modelos LLM de Groq.">
-                    Tap the magic wand and edit text with voice commands. Say "replace X with Y", "make this more formal", or "fix the grammar" and GroqBoard rewrites instantly using Groq's LLM models.
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📝</div>
-                <h3 class="feature-title" data-en="Custom Vocabulary" data-es="Vocabulario Personalizado">Custom Vocabulary</h3>
-                <p class="feature-description" data-en="Add specialized terms, names, or technical jargon via Custom Instructions. Define your writing style and GroqBoard will adapt its transcription to match you." data-es="Agrega términos especializados, nombres o jerga técnica mediante Instrucciones Personalizadas. Define tu estilo de escritura y GroqBoard adaptará su transcripción a ti.">
-                    Add specialized terms, names, or technical jargon via Custom Instructions. Define your writing style and GroqBoard will adapt its transcription to match you.
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3 class="feature-title" data-en="Works Everywhere" data-es="Funciona en Todas Partes">Works Everywhere</h3>
-                <p class="feature-description" data-en="Use voice typing in ANY app. WhatsApp, Gmail, Google Docs, social media, notes. If you can type there, you can speak there." data-es="Usa dictado por voz en CUALQUIER app. WhatsApp, Gmail, Google Docs, redes sociales, notas. Si puedes escribir ahí, puedes hablar ahí.">
-                    Use voice typing in ANY app. WhatsApp, Gmail, Google Docs, social media, notes. If you can type there, you can speak there.
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3 class="feature-title" data-en="Smart Shortcuts" data-es="Atajos Inteligentes">Smart Shortcuts</h3>
-                <p class="feature-description" data-en="Press delete 5 times to clear all text instantly. Double-tap spacebar to insert the top prediction or a period. Quick punctuation keys for common symbols. Instant keyboard switching button." data-es="Presiona borrar 5 veces para limpiar todo el texto. Doble toque en la barra espaciadora para insertar la predicción central o un punto. Teclas rápidas de puntuación. Cambio de teclado instantáneo.">
-                    Press delete 5 times to clear all text instantly. Double-tap spacebar to insert the top prediction or a period. Quick punctuation keys for common symbols. Instant keyboard switching button.
+                <p class="feature-description" data-en="Tap the magic wand and edit with voice. &quot;Replace X with Y&quot;, &quot;make it formal&quot;, &quot;fix grammar&quot; — rewritten instantly by Groq's LLM." data-es="Toca la varita mágica y edita con voz. &quot;Reemplaza X por Y&quot;, &quot;hazlo formal&quot;, &quot;corrige gramática&quot; — reescrito al instante por el LLM de Groq.">
+                    Tap the magic wand and edit with voice. "Replace X with Y", "make it formal", "fix grammar" — rewritten instantly by Groq's LLM.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="new-badge" data-en="NEW" data-es="NUEVO">NEW</div>
                 <div class="feature-icon">🫧</div>
                 <h3 class="feature-title" data-en="Floating Bubble" data-es="Burbuja Flotante">Floating Bubble</h3>
-                <p class="feature-description" data-en="Dictate in any app without switching keyboards. A floating mic bubble appears when you focus a text field. Tap to dictate, long-press for AI voice editing. Drag to dismiss, shake to restore. Adjustable size." data-es="Dicta en cualquier app sin cambiar de teclado. Una burbuja flotante de micrófono aparece cuando enfocas un campo de texto. Toca para dictar, mantén presionado para edición por voz con IA. Arrastra para descartar, agita para restaurar. Tamaño ajustable.">
-                    Dictate in any app without switching keyboards. A floating mic bubble appears when you focus a text field. Tap to dictate, long-press for AI voice editing. Drag to dismiss, shake to restore. Adjustable size.
+                <p class="feature-description" data-en="Dictate in any app without switching keyboards. Tap to speak, long-press for AI editing. Drag to dismiss, shake to restore." data-es="Dicta en cualquier app sin cambiar de teclado. Toca para hablar, mantén presionado para edición IA. Arrastra para descartar, agita para restaurar.">
+                    Dictate in any app without switching keyboards. Tap to speak, long-press for AI editing. Drag to dismiss, shake to restore.
                 </p>
             </div>
             <div class="feature-card">
-                <div class="new-badge" data-en="NEW" data-es="NUEVO">NEW</div>
-                <div class="feature-icon">↕️</div>
-                <h3 class="feature-title" data-en="Resizable Keyboard" data-es="Teclado Redimensionable">Resizable Keyboard</h3>
-                <p class="feature-description" data-en="Adjust the keyboard height to fit your hands. Drag the resize handle up or down to scale from 60% to 160%. Separate sizes for voice and QWERTY modes. One tap to reset to default." data-es="Ajusta la altura del teclado a tus manos. Arrastra el control de tamaño arriba o abajo para escalar de 60% a 160%. Tamaños separados para modo voz y QWERTY. Un toque para volver al tamaño por defecto.">
-                    Adjust the keyboard height to fit your hands. Drag the resize handle up or down to scale from 60% to 160%. Separate sizes for voice and QWERTY modes. One tap to reset to default.
+                <div class="feature-icon">⌨️</div>
+                <h3 class="feature-title" data-en="Full Keyboard" data-es="Teclado Completo">Full Keyboard</h3>
+                <p class="feature-description" data-en="QWERTY with swipe typing, emoji keyboard, and resizable height (60%–160%). Voice, typing, and swipe work together." data-es="QWERTY con escritura por deslizamiento, teclado de emojis y altura ajustable (60%–160%). Voz, escritura y deslizamiento juntos.">
+                    QWERTY with swipe typing, emoji keyboard, and resizable height (60%–160%). Voice, typing, and swipe work together.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="new-badge" data-en="NEW" data-es="NUEVO">NEW</div>
                 <div class="feature-icon">🧠</div>
                 <h3 class="feature-title" data-en="Smart Predictions" data-es="Predicciones Inteligentes">Smart Predictions</h3>
-                <p class="feature-description" data-en="Word predictions powered by local learning and Groq's LLM. Auto-correct, accent correction, next-word phrases, and swipe typing all work together. The more you type, the smarter it gets." data-es="Predicciones de palabras con aprendizaje local y el LLM de Groq. Autocorrección, corrección de acentos, frases de siguiente palabra y escritura por deslizamiento funcionan juntos. Cuanto más escribes, más inteligente se vuelve.">
-                    Word predictions powered by local learning and Groq's LLM. Auto-correct, accent correction, next-word phrases, and swipe typing all work together. The more you type, the smarter it gets.
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⌚</div>
-                <h3 class="feature-title" data-en="Wear OS Support" data-es="Soporte Wear OS">Wear OS Support</h3>
-                <p class="feature-description" data-en="Dictate from your smartwatch. Your settings sync automatically. Type anywhere, straight from your wrist with a watch optimized UI." data-es="Dicta desde tu smartwatch. Tu configuración se sincroniza automáticamente. Escribe en cualquier lugar, directo desde tu muñeca con una interfaz optimizada para reloj.">
-                    Dictate from your smartwatch. Your settings sync automatically. Type anywhere, straight from your wrist with a watch optimized UI.
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⌨️</div>
-                <h3 class="feature-title" data-en="Full Keyboard Mode" data-es="Teclado Completo">Full Keyboard Mode</h3>
-                <p class="feature-description" data-en="Switch between voice-only and a full QWERTY keyboard with one tap. Swipe to type with spatial path matching. Emoji keyboard included. Use voice, typing, and swipe together for maximum flexibility." data-es="Cambia entre modo de voz y un teclado QWERTY completo con un toque. Desliza para escribir con reconocimiento de trayectoria. Teclado de emojis incluido. Usa voz, escritura y deslizamiento juntos para máxima flexibilidad.">
-                    Switch between voice-only and a full QWERTY keyboard with one tap. Swipe to type with spatial path matching. Emoji keyboard included. Use voice, typing, and swipe together for maximum flexibility.
+                <p class="feature-description" data-en="Auto-correct, accent correction, and next-word suggestions powered by local learning and Groq's LLM. The more you type, the smarter it gets." data-es="Autocorrección, corrección de acentos y sugerencias de siguiente palabra con aprendizaje local y el LLM de Groq. Cuanto más escribes, más inteligente se vuelve.">
+                    Auto-correct, accent correction, and next-word suggestions powered by local learning and Groq's LLM. The more you type, the smarter it gets.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">✍️</div>
-                <h3 class="feature-title" data-en="Custom Instructions" data-es="Instrucciones Personalizadas">Custom Instructions</h3>
-                <p class="feature-description" data-en="Teach GroqBoard your writing style and help it recognize specific names or technical terms. Add examples, instructions, and names separated by semicolons for precise, personalized transcription." data-es="Enséñale a GroqBoard tu estilo de escritura y ayúdalo a reconocer nombres específicos o términos técnicos. Agrega ejemplos, instrucciones y nombres separados por punto y coma.">
-                    Teach GroqBoard your writing style and help it recognize specific names or technical terms. Add examples, instructions, and names separated by semicolons for precise, personalized transcription.
+                <h3 class="feature-title" data-en="Personalize It" data-es="Personalízalo">Personalize It</h3>
+                <p class="feature-description" data-en="Add custom vocabulary, names, and writing style via Custom Instructions. Train predictions by importing your WhatsApp chat history or any .txt file." data-es="Agrega vocabulario, nombres y estilo de escritura en Instrucciones Personalizadas. Entrena predicciones importando tu historial de WhatsApp o cualquier archivo .txt.">
+                    Add custom vocabulary, names, and writing style via Custom Instructions. Train predictions by importing your WhatsApp chat history or any .txt file.
                 </p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3 class="feature-title" data-en="Train Predictions" data-es="Entrenar Predicciones">Train Predictions</h3>
-                <p class="feature-description" data-en="Import a .txt file (e.g. your WhatsApp chat history) to build a local dictionary for word predictions. Works across all 8 languages. Only your messages are used, keeping everything personal and private." data-es="Importa un archivo .txt (ej. tu historial de chat de WhatsApp) para crear un diccionario local de predicciones. Funciona en los 8 idiomas. Solo se usan tus mensajes, manteniendo todo privado.">
-                    Import a .txt file (e.g. your WhatsApp chat history) to build a local dictionary for word predictions. Works across all 8 languages. Only your messages are used, keeping everything personal and private.
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title" data-en="Works Everywhere" data-es="Funciona en Todas Partes">Works Everywhere</h3>
+                <p class="feature-description" data-en="WhatsApp, Gmail, Google Docs, social media, notes — if you can type there, you can speak there." data-es="WhatsApp, Gmail, Google Docs, redes sociales, notas — si puedes escribir ahí, puedes hablar ahí.">
+                    WhatsApp, Gmail, Google Docs, social media, notes — if you can type there, you can speak there.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title" data-en="Smart Shortcuts" data-es="Atajos Inteligentes">Smart Shortcuts</h3>
+                <p class="feature-description" data-en="Delete x5 to clear all. Double-tap space for top prediction or period. Quick punctuation and instant keyboard switching." data-es="Borrar x5 para limpiar todo. Doble toque en espacio para predicción o punto. Puntuación rápida y cambio de teclado instantáneo.">
+                    Delete x5 to clear all. Double-tap space for top prediction or period. Quick punctuation and instant keyboard switching.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⌚</div>
+                <h3 class="feature-title" data-en="Wear OS" data-es="Wear OS">Wear OS</h3>
+                <p class="feature-description" data-en="Dictate from your smartwatch with a watch-optimized UI. Settings sync automatically." data-es="Dicta desde tu smartwatch con una interfaz optimizada. La configuración se sincroniza automáticamente.">
+                    Dictate from your smartwatch with a watch-optimized UI. Settings sync automatically.
                 </p>
             </div>
         </div>
@@ -1791,27 +1784,6 @@
             <h2 class="section-title" data-en="Beautiful. Simple. Powerful." data-es="Hermoso. Simple. Poderoso.">Beautiful. Simple. Powerful.</h2>
         </div>
         <div class="screenshots-track">
-            <!-- Phone screenshot 1 - Keyboard in action -->
-            <div class="screenshot-item phone">
-                <img src="screenshot1.jpg" alt="GroqBoard Voice Keyboard">
-            </div>
-            <!-- Phone screenshot 4 - Full Keyboard Mode -->
-            <div class="screenshot-item phone">
-                <img src="screenshot4.jpg" alt="GroqBoard Full Keyboard Mode">
-            </div>
-            <!-- Phone screenshot 2 - Settings -->
-            <div class="screenshot-item phone">
-                <img src="screenshot2.jpg" alt="GroqBoard Settings">
-            </div>
-            <!-- Keyboard screenshot (landscape) -->
-            <div class="screenshot-item keyboard">
-                <img src="screenshot3.png" alt="GroqBoard Keyboard Layout">
-            </div>
-            <!-- Watch screenshot (circular) -->
-            <div class="screenshot-item watch">
-                <img src="screenshot-watch.png" alt="GroqBoard on Wear OS">
-            </div>
-            <!-- Duplicate for seamless loop -->
             <div class="screenshot-item phone">
                 <img src="screenshot1.jpg" alt="GroqBoard Voice Keyboard">
             </div>
@@ -2038,14 +2010,23 @@
             card.style.transitionDelay = `${index * 0.1}s`;
         });
 
-        // Pause screenshot scroll on hover
+        // Drag-to-scroll for screenshots (mobile-friendly)
         const screenshotsTrack = document.querySelector('.screenshots-track');
         if (screenshotsTrack) {
-            screenshotsTrack.addEventListener('mouseenter', () => {
-                screenshotsTrack.style.animationPlayState = 'paused';
+            let isDown = false, startX, scrollLeft;
+            screenshotsTrack.addEventListener('mousedown', e => {
+                isDown = true;
+                screenshotsTrack.classList.add('dragging');
+                startX = e.pageX - screenshotsTrack.offsetLeft;
+                scrollLeft = screenshotsTrack.scrollLeft;
             });
-            screenshotsTrack.addEventListener('mouseleave', () => {
-                screenshotsTrack.style.animationPlayState = 'running';
+            screenshotsTrack.addEventListener('mouseleave', () => { isDown = false; screenshotsTrack.classList.remove('dragging'); });
+            screenshotsTrack.addEventListener('mouseup', () => { isDown = false; screenshotsTrack.classList.remove('dragging'); });
+            screenshotsTrack.addEventListener('mousemove', e => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - screenshotsTrack.offsetLeft;
+                screenshotsTrack.scrollLeft = scrollLeft - (x - startX);
             });
         }
 
