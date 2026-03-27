@@ -1197,6 +1197,118 @@
             font-size: 1.25rem;
         }
 
+        /* Power User Tips Section */
+        .power-tips {
+            padding: 6rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .power-tips-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .tip-block {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        .tip-block-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tip-block-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(245, 80, 54, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .tip-block-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .tip-block p, .tip-block li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+
+        .tip-block ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tip-block ul li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .tip-block ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--groq-orange);
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+        }
+
+        .tip-code {
+            background: rgba(245, 80, 54, 0.08);
+            border: 1px solid rgba(245, 80, 54, 0.15);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin: 1rem 0;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.82rem;
+            color: var(--groq-orange-light);
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            line-height: 1.6;
+        }
+
+        .tip-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin: 3rem 0;
+        }
+
+        .tip-highlight {
+            color: var(--groq-orange-light);
+            font-weight: 600;
+        }
+
+        .tip-block strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .tip-block {
+                padding: 1.5rem;
+            }
+
+            .tip-code {
+                font-size: 0.72rem;
+                padding: 1rem;
+            }
+        }
+
         /* CTA Section */
         .cta {
             padding: 8rem 2rem;
@@ -1879,6 +1991,79 @@
                         <span>✓</span>
                         <span data-en="No data shared with third parties" data-es="Sin datos compartidos con terceros">No data shared with third parties</span>
                     </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Power User Tips Section -->
+    <section class="power-tips" id="power-tips">
+        <div class="section-header">
+            <div class="section-label" data-en="Advanced" data-es="Avanzado">Advanced</div>
+            <h2 class="section-title" data-en="Power User Tips" data-es="Tips para Usuarios Avanzados">Power User Tips</h2>
+            <p class="section-description" data-en="Unlock GroqBoard's full potential with these advanced configurations." data-es="Desbloquea todo el potencial de GroqBoard con estas configuraciones avanzadas.">
+                Unlock GroqBoard's full potential with these advanced configurations.
+            </p>
+        </div>
+        <div class="power-tips-container">
+            <!-- Quick Settings Tile -->
+            <div class="tip-block">
+                <div class="tip-block-header">
+                    <div class="tip-block-icon">&#9881;</div>
+                    <h3 class="tip-block-title" data-en="Quick Settings Tile: Switch to GroqBoard Instantly" data-es="Tile de Ajustes Rapidos: Cambia a GroqBoard al Instante">Quick Settings Tile: Switch to GroqBoard Instantly</h3>
+                </div>
+                <p data-en="Android lets you add a Quick Settings tile to switch keyboards with one tap &mdash; no more digging through settings. To enable it, connect your phone to a computer and run this ADB command:" data-es="Android te permite agregar un tile de Ajustes Rapidos para cambiar de teclado con un solo toque, sin buscar en configuraciones. Para habilitarlo, conecta tu telefono a una computadora y ejecuta este comando ADB:">
+                    Android lets you add a Quick Settings tile to switch keyboards with one tap &mdash; no more digging through settings. To enable it, connect your phone to a computer and run this ADB command:
+                </p>
+                <div class="tip-code">adb shell cmd statusbar add-tile com.alegol.groqboard/.KeyboardTileService</div>
+                <p data-en="Once added, you'll see a GroqBoard tile in your notification shade. Tap it to instantly switch your active keyboard to GroqBoard." data-es="Una vez agregado, veras un tile de GroqBoard en tu panel de notificaciones. Tocalo para cambiar instantaneamente tu teclado activo a GroqBoard.">
+                    Once added, you'll see a GroqBoard tile in your notification shade. Tap it to instantly switch your active keyboard to GroqBoard.
+                </p>
+                <p style="margin-top: 1rem;"><strong data-en="Pro tip: Move it to the top" data-es="Pro tip: Muevelo hasta arriba">Pro tip: Move it to the top</strong></p>
+                <ul>
+                    <li data-en="Swipe down to expand your notification shade" data-es="Desliza hacia abajo para expandir tu panel de notificaciones">Swipe down to expand your notification shade</li>
+                    <li data-en="Tap the pencil/edit icon to rearrange tiles" data-es="Toca el icono del lapiz para reorganizar los tiles">Tap the pencil/edit icon to rearrange tiles</li>
+                    <li data-en="Drag the GroqBoard tile to the first row so it's always visible without fully expanding" data-es="Arrastra el tile de GroqBoard a la primera fila para que siempre este visible sin expandir completamente">Drag the GroqBoard tile to the first row so it's always visible without fully expanding</li>
+                </ul>
+                <p data-en="Now switching to GroqBoard is literally one swipe and one tap away." data-es="Ahora cambiar a GroqBoard es literalmente un desliz y un toque.">
+                    Now switching to GroqBoard is literally one swipe and one tap away.
+                </p>
+            </div>
+
+            <hr class="tip-divider">
+
+            <!-- Hardware Button Trigger -->
+            <div class="tip-block">
+                <div class="tip-block-header">
+                    <div class="tip-block-icon">&#127911;</div>
+                    <h3 class="tip-block-title" data-en="Hands-Free Voice Input with a Physical Button" data-es="Entrada de Voz Manos Libres con un Boton Fisico">Hands-Free Voice Input with a Physical Button</h3>
+                </div>
+                <p data-en="Want to start and stop voice dictation without touching the screen? GroqBoard supports external triggers &mdash; meaning you can map any physical button (volume key, Bluetooth remote, headset button) to toggle transcription on and off." data-es="Quieres iniciar y detener el dictado por voz sin tocar la pantalla? GroqBoard soporta disparadores externos, lo que significa que puedes asignar cualquier boton fisico (tecla de volumen, control Bluetooth, boton de audifonos) para activar y desactivar la transcripcion.">
+                    Want to start and stop voice dictation without touching the screen? GroqBoard supports external triggers &mdash; meaning you can map any physical button (volume key, Bluetooth remote, headset button) to toggle transcription on and off.
+                </p>
+                <p data-en="To set this up, use an automation app like:" data-es="Para configurar esto, usa una app de automatizacion como:">
+                    To set this up, use an automation app like:
+                </p>
+                <ul>
+                    <li><strong>MacroDroid</strong> <span data-en="(free, beginner-friendly)" data-es="(gratis, facil de usar)">(free, beginner-friendly)</span></li>
+                    <li><strong>Tasker</strong> <span data-en="(paid, very powerful)" data-es="(de pago, muy potente)">(paid, very powerful)</span></li>
+                    <li><strong>Automate</strong> <span data-en="(free, flowchart-based)" data-es="(gratis, basado en diagramas)">(free, flowchart-based)</span></li>
+                </ul>
+                <p style="margin-top: 0.5rem;" data-en="The general setup is:" data-es="La configuracion general es:">The general setup is:</p>
+                <ul>
+                    <li><strong data-en="Trigger:" data-es="Disparador:">Trigger:</strong> <span data-en="Choose a physical button press (e.g., volume down, a Bluetooth button, or headset button)" data-es="Elige la presion de un boton fisico (ej. bajar volumen, boton Bluetooth, o boton de audifonos)">Choose a physical button press (e.g., volume down, a Bluetooth button, or headset button)</span></li>
+                    <li><strong data-en="Action:" data-es="Accion:">Action:</strong> <span data-en="Send a broadcast intent to toggle GroqBoard's voice input:" data-es="Envia un broadcast intent para activar/desactivar la entrada de voz de GroqBoard:">Send a broadcast intent to toggle GroqBoard's voice input:</span></li>
+                </ul>
+                <div class="tip-code">Intent action: com.alegol.groqboard.TOGGLE_VOICE
+Package: com.alegol.groqboard</div>
+                <p data-en="That's it. Press the button once to start listening, press again to stop and send the transcribed text to whatever app you're in." data-es="Eso es todo. Presiona el boton una vez para empezar a escuchar, presiona de nuevo para detener y enviar el texto transcrito a cualquier app en la que estes.">
+                    That's it. Press the button once to start listening, press again to stop and send the transcribed text to whatever app you're in.
+                </p>
+                <p style="margin-top: 1rem;"><strong data-en="Use cases:" data-es="Casos de uso:">Use cases:</strong></p>
+                <ul>
+                    <li data-en="Dictate messages while driving with a Bluetooth steering wheel button" data-es="Dicta mensajes mientras conduces con un boton del volante Bluetooth">Dictate messages while driving with a Bluetooth steering wheel button</li>
+                    <li data-en="Quick voice notes with a press of the volume key while your phone is in your pocket" data-es="Notas de voz rapidas con la tecla de volumen mientras tu telefono esta en el bolsillo">Quick voice notes with a press of the volume key while your phone is in your pocket</li>
+                    <li data-en="Hands-free transcription at your desk using a cheap Bluetooth remote" data-es="Transcripcion manos libres en tu escritorio usando un control remoto Bluetooth economico">Hands-free transcription at your desk using a cheap Bluetooth remote</li>
                 </ul>
             </div>
         </div>
