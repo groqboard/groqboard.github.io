@@ -6,6 +6,15 @@
     <title>GroqBoard - AI Voice Keyboard | Lightning-Fast Speech-to-Text</title>
     <meta name="description" content="GroqBoard 4.0: AI voice keyboard with floating bubble, swipe typing, smart predictions, and Wear OS. Speak, type, and swipe in 8 languages. Privacy-first.">
     
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDZFTE6DDJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-EDZFTE6DDJ');
+    </script>
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/vUOMqqK6EwJV11uak0phYo5sMmTLYl2fB1Joh_SaLukbKyA13CFMbYGrp24RzTgiArwp1nL8GhItWpkclGwsIg=s64" sizes="64x64">
     <link rel="icon" type="image/png" href="https://play-lh.googleusercontent.com/vUOMqqK6EwJV11uak0phYo5sMmTLYl2fB1Joh_SaLukbKyA13CFMbYGrp24RzTgiArwp1nL8GhItWpkclGwsIg=s32" sizes="32x32">
@@ -2500,6 +2509,18 @@ Package: com.alegol.groqboard</div>
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;
             }
+        });
+    </script>
+
+    <!-- GA4: Track Play Store clicks as conversion -->
+    <script>
+        document.querySelectorAll('a[href*="play.google.com"]').forEach(link => {
+            link.addEventListener('click', () => {
+                gtag('event', 'play_store_click', {
+                    event_category: 'conversion',
+                    event_label: link.className
+                });
+            });
         });
     </script>
 </body>
