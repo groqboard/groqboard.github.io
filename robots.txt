@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://groqboard.github.io/sitemap.xml
