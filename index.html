@@ -2617,7 +2617,8 @@ Package: com.alegol.groqboard</div>
             link.addEventListener('click', () => {
                 gtag('event', 'play_store_click', {
                     event_category: 'conversion',
-                    event_label: link.className
+                    event_label: link.className,
+                    transport_type: 'beacon'
                 });
             });
         });
