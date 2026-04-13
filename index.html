@@ -374,6 +374,51 @@
             flex-wrap: wrap;
         }
 
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+            align-items: center;
+        }
+
+        .trust-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 0.45rem 0.9rem;
+            font-size: 0.82rem;
+            color: #cccccc;
+            white-space: nowrap;
+        }
+
+        .trust-pill svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+        }
+
+        .trust-pill .pill-stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .trust-pill .pill-stars svg {
+            fill: #f55036;
+        }
+
+        .trust-pill.refund {
+            border-color: rgba(245, 80, 54, 0.25);
+            color: #e0e0e0;
+        }
+
+        .trust-pill.refund svg {
+            fill: #f55036;
+        }
+
         .btn-primary {
             display: inline-flex;
             align-items: center;
@@ -1522,6 +1567,216 @@
             }
         }
 
+        /* Reviews Section */
+        .reviews {
+            padding: 8rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .reviews-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .reviews-summary {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0 3.5rem;
+            flex-wrap: wrap;
+        }
+
+        .reviews-score {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 1;
+            background: var(--gradient-orange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .reviews-score-detail {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .reviews-stars-big {
+            display: flex;
+            gap: 4px;
+        }
+
+        .reviews-stars-big svg {
+            width: 28px;
+            height: 28px;
+            fill: #f55036;
+        }
+
+        .reviews-count {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 1.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(245, 80, 54, 0.25);
+        }
+
+        .review-card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 3px;
+        }
+
+        .review-stars svg {
+            width: 18px;
+            height: 18px;
+            fill: #f55036;
+        }
+
+        .review-date {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        .review-text {
+            color: #cccccc;
+            font-size: 1rem;
+            line-height: 1.65;
+            flex: 1;
+        }
+
+        .review-device {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .review-device svg {
+            width: 13px;
+            height: 13px;
+            fill: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 900px) {
+            .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+            .reviews-score {
+                font-size: 3.5rem;
+            }
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 5rem 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .faq-inner {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .faq-q {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .faq-q::before {
+            content: "Q";
+            color: var(--groq-orange);
+            font-weight: 700;
+            font-size: 0.8rem;
+            background: rgba(245, 80, 54, 0.1);
+            border: 1px solid rgba(245, 80, 54, 0.3);
+            border-radius: 4px;
+            padding: 0.1rem 0.45rem;
+            flex-shrink: 0;
+            margin-top: 0.1rem;
+        }
+
+        .faq-a {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            padding-left: 2.1rem;
+        }
+
+        .faq-a a {
+            color: var(--groq-orange);
+            text-decoration: none;
+        }
+
+        .faq-a a:hover {
+            text-decoration: underline;
+        }
+
         /* CTA Section */
         .cta {
             padding: 8rem 2rem;
@@ -1880,6 +2135,7 @@
                 <li><a href="#how-it-works" data-en="How It Works" data-es="Cómo Funciona">How It Works</a></li>
                 <li><a href="#privacy" data-en="Privacy" data-es="Privacidad">Privacy</a></li>
                 <li><a href="#power-tips" data-en="Pro Tips" data-es="Tips Pro">Pro Tips</a></li>
+                <li><a href="#reviews" data-en="Reviews" data-es="Reseñas">Reviews</a></li>
                 <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
             </ul>
         </div>
@@ -1918,6 +2174,31 @@
                         Learn More →
                     </a>
                 </div>
+
+                <div class="hero-trust">
+                    <!-- Stars + reviews -->
+                    <div class="trust-pill">
+                        <div class="pill-stars">
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        </div>
+                        <span data-en="5.0 on Google Play" data-es="5.0 en Google Play">5.0 on Google Play</span>
+                    </div>
+                    <!-- Downloads -->
+                    <div class="trust-pill">
+                        <svg viewBox="0 0 24 24" fill="#aaa"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-14 9v2h14v-2H5z"/></svg>
+                        <span data-en="100+ downloads" data-es="100+ descargas">100+ downloads</span>
+                    </div>
+                    <!-- Refund -->
+                    <div class="trust-pill refund">
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg>
+                        <span data-en="2-hr free trial · refund via Google Play" data-es="2 hs de prueba gratis · reembolso por Google Play">2-hr free trial · refund via Google Play</span>
+                    </div>
+                </div>
+
             </div>
             <div class="hero-visual">
                 <div class="floating-badge top-left" data-en="🎙️ Voice to Text" data-es="🎙️ Voz a Texto">🎙️ Voice to Text</div>
@@ -2343,6 +2624,160 @@ Package: com.alegol.groqboard</div>
                 <button type="submit" class="form-submit" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
                 <p class="form-status" id="formStatus"></p>
             </form>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="reviews-header">
+            <div class="section-label" data-en="User Reviews" data-es="Reseñas">User Reviews</div>
+            <h2 class="section-title" data-en="Loved by Real Users" data-es="Amado por Usuarios Reales">Loved by Real Users</h2>
+            <p class="section-description" data-en="Here's what people are saying on Google Play." data-es="Esto es lo que la gente dice en Google Play.">Here's what people are saying on Google Play.</p>
+            <div class="reviews-summary">
+                <div class="reviews-score">5.0</div>
+                <div class="reviews-score-detail">
+                    <div class="reviews-stars-big">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="reviews-count" data-en="5 verified reviews on Google Play" data-es="5 reseñas verificadas en Google Play">5 verified reviews on Google Play</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-grid">
+
+            <!-- Review 1 -->
+            <div class="review-card">
+                <div class="review-card-top">
+                    <div class="review-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="review-date">Mar 30, 2026</span>
+                </div>
+                <p class="review-text">"It's just what I was looking for to have high quality dictation anywhere without another janky keyboard."</p>
+                <div class="review-device">
+                    <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                    Google Pixel 10a &nbsp;·&nbsp; English
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card">
+                <div class="review-card-top">
+                    <div class="review-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="review-date">Mar 26, 2026</span>
+                </div>
+                <p class="review-text">"I updated GroqBoard today. A while ago I asked the developer if the size could be adjusted, and now it is. This means the keyboard no longer takes up so much space on my screen. I think the floating microphone option is a brilliant idea, and I've already used it. I use this keyboard and can type very quickly. Thanks for the personal feedback and for the new features."</p>
+                <div class="review-device">
+                    <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                    Samsung Galaxy A52s 5G &nbsp;·&nbsp; German
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card">
+                <div class="review-card-top">
+                    <div class="review-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="review-date">Mar 24, 2026</span>
+                </div>
+                <p class="review-text">"Perfect, I always have it available with the floating bubble option. A perfect complement to your device."</p>
+                <div class="review-device">
+                    <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                    ZTE A2023G &nbsp;·&nbsp; Spanish
+                </div>
+            </div>
+
+            <!-- Review 4 -->
+            <div class="review-card">
+                <div class="review-card-top">
+                    <div class="review-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="review-date">Feb 23, 2026</span>
+                </div>
+                <p class="review-text">"It's great to see integrated qwerty keyboard. Great app. Are you considering to add more language like Chinese? Thanks!"</p>
+                <div class="review-device">
+                    <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                    Google Pixel 8 Pro &nbsp;·&nbsp; English
+                </div>
+            </div>
+
+            <!-- Review 5 -->
+            <div class="review-card">
+                <div class="review-card-top">
+                    <div class="review-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <span class="review-date">Dec 4, 2025</span>
+                </div>
+                <p class="review-text">"This keyboard saves your time."</p>
+                <div class="review-device">
+                    <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+                    Redmi 9 &nbsp;·&nbsp; English
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="faq-inner">
+            <div class="faq-header">
+                <div class="section-label" data-en="FAQ" data-es="Preguntas Frecuentes">FAQ</div>
+                <h2 class="section-title" data-en="Good to Know" data-es="Bueno Saber">Good to Know</h2>
+            </div>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <div class="faq-q" data-en="What if I buy it and don't like it?" data-es="¿Y si lo compro y no me convence?">What if I buy it and don't like it?</div>
+                    <p class="faq-a" data-en="Google Play gives you a 2-hour refund window after purchase — no questions asked, no need to contact us. Just open the app's page on the Play Store, tap Refund, and you're done. Zero risk." data-es="Google Play te da una ventana de 2 horas para pedir reembolso después de la compra — sin preguntas, sin necesidad de contactarnos. Solo abre la página de la app en la Play Store, toca Reembolsar, y listo. Sin riesgo.">Google Play gives you a 2-hour refund window after purchase — no questions asked, no need to contact us. Just open the app's page on the Play Store, tap <strong>Refund</strong>, and you're done. Zero risk.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" data-en="What AI model does it use?" data-es="¿Qué modelo de IA usa?">What AI model does it use?</div>
+                    <p class="faq-a" data-en="Voice recognition runs on Whisper v3 Large — one of the most accurate speech-to-text models available, running on Groq's ultra-fast hardware. Smart predictions use a LLaMA model, also via Groq. Both are state-of-the-art open models." data-es="El reconocimiento de voz usa Whisper v3 Large — uno de los modelos de voz a texto más precisos disponibles, corriendo en el hardware ultra-rápido de Groq. Las predicciones inteligentes usan un modelo LLaMA, también vía Groq. Ambos son modelos de última generación.">Voice recognition runs on <strong>Whisper v3 Large</strong> — one of the most accurate speech-to-text models available, running on Groq's ultra-fast hardware. Smart predictions use a <strong>LLaMA model</strong>, also via Groq. Both are state-of-the-art open models.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" data-en="Can I make it learn my writing style?" data-es="¿Puedo hacer que aprenda mi forma de escribir?">Can I make it learn my writing style?</div>
+                    <p class="faq-a" data-en="Yes. You can import a WhatsApp chat export and the app will train on your own messages — learning your vocabulary, phrases, and preferred language. You can also add custom words manually. The more you use it, the smarter it gets." data-es="Sí. Puedes importar un chat exportado de WhatsApp y la app entrenará con tus propios mensajes — aprendiendo tu vocabulario, frases y lenguaje. También puedes agregar palabras personalizadas manualmente. Mientras más la usas, más mejora.">Yes. You can import a WhatsApp chat export and the app trains on your own messages — learning your vocabulary, phrases, and preferred language. You can also add custom words manually. The more you use it, the smarter it gets.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" data-en="Does it need internet to work?" data-es="¿Necesita internet para funcionar?">Does it need internet to work?</div>
+                    <p class="faq-a" data-en="Voice recognition and AI predictions require an internet connection — they run on Groq's servers. The full QWERTY keyboard and swipe typing work completely offline, so you can still type without a signal." data-es="El reconocimiento de voz y las predicciones con IA requieren conexión a internet — corren en los servidores de Groq. El teclado QWERTY completo y la escritura por deslizamiento funcionan sin conexión, así que puedes seguir escribiendo sin señal.">Voice recognition and AI predictions require an internet connection — they run on Groq's servers. The full QWERTY keyboard and swipe typing work completely <strong>offline</strong>, so you can still type without a signal.</p>
+                </div>
+
+            </div>
         </div>
     </section>
 
