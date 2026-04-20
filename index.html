@@ -1157,6 +1157,7 @@
             cursor: grab;
             justify-content: center;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         .screenshots-track::-webkit-scrollbar {
@@ -1288,9 +1289,9 @@
         }
 
         .video-play-circle svg {
-            width: 26px;
-            height: 26px;
-            margin-left: 4px;
+            width: 30px;
+            height: 30px;
+            margin-left: 3px;
         }
 
         .video-item-label {
@@ -2564,7 +2565,9 @@
                 <div class="video-play-overlay">
                     <span class="video-item-title">GroqBoard</span>
                     <div class="video-play-circle">
-                        <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 6.27C7 5.08 8.3 4.36 9.3 5.01l9.9 6.4a1.5 1.5 0 010 2.58l-9.9 6.4C8.3 21 7 20.28 7 19.09V6.27z" fill="white"/>
+                        </svg>
                     </div>
                     <span class="video-item-label" data-en="Watch Demo" data-es="Ver Demo">Watch Demo</span>
                 </div>
