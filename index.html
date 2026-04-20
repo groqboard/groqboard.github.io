@@ -1243,38 +1243,61 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1rem;
+            gap: 1.1rem;
             pointer-events: none;
         }
 
+        .video-item-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
         .video-play-circle {
-            width: 60px;
-            height: 60px;
+            width: 64px;
+            height: 64px;
             background: var(--groq-orange);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 30px rgba(245, 80, 54, 0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 28px rgba(245, 80, 54, 0.55), 0 4px 16px rgba(0,0,0,0.4);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+        }
+
+        /* Subtle ring behind the circle */
+        .video-play-circle::before {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 1.5px solid rgba(245, 80, 54, 0.3);
+            transition: opacity 0.25s ease;
+            opacity: 0;
         }
 
         .screenshot-item.video-item:hover .video-play-circle {
-            transform: scale(1.12);
-            box-shadow: 0 0 45px rgba(245, 80, 54, 0.7);
+            transform: scale(1.1);
+            box-shadow: 0 0 44px rgba(245, 80, 54, 0.75), 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .screenshot-item.video-item:hover .video-play-circle::before {
+            opacity: 1;
         }
 
         .video-play-circle svg {
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             margin-left: 4px;
         }
 
         .video-item-label {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 600;
-            color: var(--text-secondary);
-            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            letter-spacing: 0.1em;
             text-transform: uppercase;
         }
 
@@ -2539,6 +2562,7 @@
         <div class="screenshots-track">
             <div class="screenshot-item video-item" id="videoPlayBtn" role="button" tabindex="0" aria-label="Watch GroqBoard demo video">
                 <div class="video-play-overlay">
+                    <span class="video-item-title">GroqBoard</span>
                     <div class="video-play-circle">
                         <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
                     </div>
