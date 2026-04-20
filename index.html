@@ -1220,6 +1220,127 @@
             object-fit: cover;
         }
 
+        /* Video demo item */
+        .screenshot-item.video-item {
+            width: 160px;
+            min-height: 280px;
+            background: #0d0d0d;
+            border: 1px solid rgba(245, 80, 54, 0.4);
+            box-shadow: 0 0 30px rgba(245, 80, 54, 0.12), 0 15px 40px rgba(0,0,0,0.4);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .screenshot-item.video-item:hover {
+            border-color: rgba(245, 80, 54, 0.7);
+            box-shadow: 0 0 50px rgba(245, 80, 54, 0.22), 0 15px 40px rgba(0,0,0,0.4);
+            transform: scale(1.05);
+        }
+
+        .video-play-overlay {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            pointer-events: none;
+        }
+
+        .video-play-circle {
+            width: 60px;
+            height: 60px;
+            background: var(--groq-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(245, 80, 54, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .screenshot-item.video-item:hover .video-play-circle {
+            transform: scale(1.12);
+            box-shadow: 0 0 45px rgba(245, 80, 54, 0.7);
+        }
+
+        .video-play-circle svg {
+            width: 28px;
+            height: 28px;
+            margin-left: 4px;
+        }
+
+        .video-item-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* Video modal */
+        .video-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .video-modal.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .video-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+        }
+
+        .video-modal-content {
+            position: relative;
+            z-index: 1;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 0 60px rgba(245, 80, 54, 0.18), 0 30px 80px rgba(0,0,0,0.8);
+            border: 1px solid rgba(245, 80, 54, 0.2);
+            max-width: 90vw;
+            max-height: 85vh;
+        }
+
+        .video-modal-content video {
+            display: block;
+            max-width: 90vw;
+            max-height: 85vh;
+            width: auto;
+            height: auto;
+        }
+
+        .video-modal-close {
+            position: absolute;
+            top: -36px;
+            right: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+
+        .video-modal-close:hover { opacity: 1; }
+
+        .video-modal-close svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .screenshots-track {
                 flex-wrap: nowrap;
@@ -2416,6 +2537,14 @@
             <h2 class="section-title" data-en="Beautiful. Simple. Powerful." data-es="Hermoso. Simple. Poderoso.">Beautiful. Simple. Powerful.</h2>
         </div>
         <div class="screenshots-track">
+            <div class="screenshot-item video-item" id="videoPlayBtn" role="button" tabindex="0" aria-label="Watch GroqBoard demo video">
+                <div class="video-play-overlay">
+                    <div class="video-play-circle">
+                        <svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    <span class="video-item-label" data-en="Watch Demo" data-es="Ver Demo">Watch Demo</span>
+                </div>
+            </div>
             <div class="screenshot-item phone">
                 <img src="screenshot1.jpg" alt="GroqBoard AI voice keyboard for Android - voice typing interface screenshot">
             </div>
@@ -3005,6 +3134,45 @@ Package: com.alegol.groqboard</div>
         // Set initial language on page load
         setLanguage(currentLang);
 
+        // Video Demo Modal
+        const videoModal = document.getElementById('videoModal');
+        const videoPlayBtn = document.getElementById('videoPlayBtn');
+        const videoModalClose = document.getElementById('videoModalClose');
+        const demoVideo = document.getElementById('demoVideo');
+        const videoBackdrop = videoModal.querySelector('.video-modal-backdrop');
+
+        function openVideoModal() {
+            videoModal.classList.add('active');
+            demoVideo.play();
+        }
+
+        function closeVideoModal() {
+            videoModal.classList.remove('active');
+            demoVideo.pause();
+            demoVideo.currentTime = 0;
+        }
+
+        // Distinguish click from drag on the video item
+        let videoDragStart = null;
+        videoPlayBtn.addEventListener('mousedown', e => { videoDragStart = { x: e.clientX, y: e.clientY }; });
+        videoPlayBtn.addEventListener('click', e => {
+            if (videoDragStart) {
+                const moved = Math.abs(e.clientX - videoDragStart.x) > 5 || Math.abs(e.clientY - videoDragStart.y) > 5;
+                videoDragStart = null;
+                if (moved) return;
+            }
+            openVideoModal();
+        });
+        videoPlayBtn.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVideoModal(); }
+        });
+
+        videoModalClose.addEventListener('click', closeVideoModal);
+        videoBackdrop.addEventListener('click', closeVideoModal);
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && videoModal.classList.contains('active')) closeVideoModal();
+        });
+
         // Contact Form Submission
         const contactForm = document.getElementById('contactForm');
         const formStatus = document.getElementById('formStatus');
@@ -3046,6 +3214,17 @@ Package: com.alegol.groqboard</div>
             }
         });
     </script>
+
+    <!-- Video Demo Modal -->
+    <div class="video-modal" id="videoModal" role="dialog" aria-modal="true">
+        <div class="video-modal-backdrop"></div>
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="videoModalClose" aria-label="Close video">
+                <svg viewBox="0 0 24 24" fill="white"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            </button>
+            <video id="demoVideo" src="GroqBoard.mp4" playsinline></video>
+        </div>
+    </div>
 
     <!-- GA4: Track Play Store clicks as conversion -->
     <script>
