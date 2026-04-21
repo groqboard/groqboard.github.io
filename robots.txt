@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://groqboard.github.io/sitemap.xml
+Sitemap: https://groqboard.com/sitemap.xml
