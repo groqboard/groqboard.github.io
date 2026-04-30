@@ -1189,8 +1189,6 @@
             flex-shrink: 0;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: transform 0.3s ease;
             scroll-snap-align: center;
         }
@@ -1206,6 +1204,8 @@
         /* Phone screenshots (tall) */
         .screenshot-item.phone {
             width: 160px;
+            border-radius: 0;
+            overflow: visible;
         }
 
         .screenshot-item.phone img {
