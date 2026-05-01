@@ -1222,6 +1222,42 @@
             display: block;
         }
 
+        /* Paywall price overlay */
+        .paywall-wrap { position: relative; }
+        .price-chip {
+            position: absolute;
+            top: 63%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            color: #111;
+            font-size: 17px;
+            font-weight: 800;
+            padding: 2px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+            pointer-events: none;
+            font-family: inherit;
+        }
+        .price-btn-chip {
+            position: absolute;
+            top: 73.5%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f55036;
+            color: #fff;
+            font-size: 7px;
+            font-weight: 700;
+            padding: 5px 0;
+            border-radius: 20px;
+            white-space: nowrap;
+            width: 82%;
+            text-align: center;
+            pointer-events: none;
+            letter-spacing: 0.3px;
+            font-family: inherit;
+        }
+
         /* Watch screenshot */
         .screenshot-item.watch {
             width: 200px;
@@ -2600,8 +2636,10 @@
             <div class="screenshot-item phone">
                 <img src="pic_v5_6_predictions_clean.png?v=2" alt="GroqBoard smart word predictions powered by AI">
             </div>
-            <div class="screenshot-item phone">
+            <div class="screenshot-item phone paywall-wrap">
                 <img src="pic_v5_3_paywall_clean.png?v=2" alt="GroqBoard lifetime license - one-time payment, no subscription">
+                <span class="price-chip">$4.99 USD</span>
+                <span class="price-btn-chip">GET LIFETIME ACCESS — $4.99 USD</span>
             </div>
             <div class="screenshot-item phone">
                 <img src="pic_v5_2_settings_clean.png?v=2" alt="GroqBoard settings - languages, floating bubble and custom vocabulary">
