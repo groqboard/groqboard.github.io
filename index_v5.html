@@ -1222,6 +1222,24 @@
             display: block;
         }
 
+        /* Paywall price overlay */
+        .paywall-wrap { position: relative; }
+        .price-chip {
+            position: absolute;
+            top: 47%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #000;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 800;
+            padding: 7px 14px;
+            border-radius: 6px;
+            white-space: nowrap;
+            pointer-events: none;
+            font-family: inherit;
+        }
+
         /* Watch screenshot */
         .screenshot-item.watch {
             width: 200px;
