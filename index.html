@@ -76,7 +76,7 @@
                 "name": "How much does GroqBoard cost?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "GroqBoard is free to try for 7 days — no credit card required. After the trial, unlock a lifetime license with a one-time payment (~$4.99 USD). No subscription, ever. Google Play adjusts the price to your local currency automatically."
+                    "text": "GroqBoard is free to try for 7 days, no credit card required. After the trial, unlock a lifetime license with a one-time payment (~$4.99 USD). No subscription, ever. Google Play adjusts the price to your local currency automatically."
                 }
             },
             {
@@ -1805,19 +1805,19 @@
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.25rem;
+            gap: 0.85rem;
             max-width: 1100px;
             margin: 0 auto;
         }
 
         .review-card {
             background: var(--bg-card);
-            border-radius: 20px;
-            padding: 1.75rem;
+            border-radius: 16px;
+            padding: 1.1rem 1.25rem;
             border: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.6rem;
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
@@ -1847,14 +1847,13 @@
 
         .review-date {
             color: var(--text-secondary);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
 
         .review-text {
             color: #cccccc;
-            font-size: 1rem;
-            line-height: 1.65;
-            flex: 1;
+            font-size: 0.88rem;
+            line-height: 1.55;
         }
 
         .review-device {
@@ -2372,7 +2371,7 @@
                     <!-- Downloads -->
                     <div class="trust-pill">
                         <svg viewBox="0 0 24 24" fill="#aaa"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-14 9v2h14v-2H5z"/></svg>
-                        <span data-en="100+ downloads" data-es="100+ descargas">100+ downloads</span>
+                        <span data-en="250+ downloads" data-es="250+ descargas">250+ downloads</span>
                     </div>
                     <!-- Free trial -->
                     <div class="trust-pill refund">
@@ -2495,16 +2494,16 @@
                 <div class="new-badge" data-en="NEW" data-es="NUEVO">NEW</div>
                 <div class="feature-icon">⚡</div>
                 <h3 class="feature-title" data-en="Smart Actions" data-es="Acciones Inteligentes">Smart Actions</h3>
-                <p class="feature-description" data-en="Select any text and tap the Actions chip — translate, summarize, reply, fix grammar, rephrase, and more. Context-aware suggestions you can run with a single tap." data-es="Selecciona cualquier texto y toca el chip Actions — traduce, resume, responde, corrige gramática, reformula y más. Sugerencias contextuales que ejecutas con un toque.">
-                    Select any text and tap the Actions chip — translate, summarize, reply, fix grammar, rephrase, and more. Context-aware suggestions you can run with a single tap.
+                <p class="feature-description" data-en="Select any text and tap the Actions chip: translate, summarize, reply, fix grammar, rephrase, and more. Context-aware suggestions you can run with a single tap." data-es="Selecciona cualquier texto y toca el chip Actions: traduce, resume, responde, corrige gramática, reformula y más. Sugerencias contextuales que ejecutas con un toque.">
+                    Select any text and tap the Actions chip: translate, summarize, reply, fix grammar, rephrase, and more. Context-aware suggestions you can run with a single tap.
                 </p>
             </div>
             <div class="feature-card">
                 <div class="new-badge" data-en="NEW" data-es="NUEVO">NEW</div>
                 <div class="feature-icon">🔌</div>
                 <h3 class="feature-title" data-en="OpenRouter Support" data-es="Soporte para OpenRouter">OpenRouter Support</h3>
-                <p class="feature-description" data-en="Use any LLM you want — Claude, GPT, Gemini, Llama, Mistral... Get a free API key at openrouter.ai, paste it into Settings along with your favorite model name, and GroqBoard will route AI editing, Smart Actions, and predictions through it." data-es="Usa cualquier LLM que quieras — Claude, GPT, Gemini, Llama, Mistral... Obtén una API key gratis en openrouter.ai, pégala en Configuración junto con el nombre del modelo que prefieras, y GroqBoard usará ese modelo para edición con IA, Smart Actions y predicciones.">
-                    Use any LLM you want — Claude, GPT, Gemini, Llama, Mistral... Get a free API key at <a href="https://openrouter.ai" target="_blank" rel="noopener" style="color: var(--groq-orange); text-decoration: none;">openrouter.ai</a>, paste it into Settings along with your favorite model name, and GroqBoard will route AI editing, Smart Actions, and predictions through it.
+                <p class="feature-description" data-en="Use any LLM you want: Claude, GPT, Gemini, Llama, Mistral... Get a free API key at openrouter.ai, paste it into Settings along with your favorite model name, and GroqBoard will route AI editing, Smart Actions, and predictions through it." data-es="Usa cualquier LLM que quieras: Claude, GPT, Gemini, Llama, Mistral... Obtén una API key gratis en openrouter.ai, pégala en Configuración junto con el nombre del modelo que prefieras, y GroqBoard usará ese modelo para edición con IA, Smart Actions y predicciones.">
+                    Use any LLM you want: Claude, GPT, Gemini, Llama, Mistral... Get a free API key at <a href="https://openrouter.ai" target="_blank" rel="noopener" style="color: var(--groq-orange); text-decoration: none;">openrouter.ai</a>, paste it into Settings along with your favorite model name, and GroqBoard will route AI editing, Smart Actions, and predictions through it.
                 </p>
             </div>
             <div class="feature-card">
@@ -2525,8 +2524,8 @@
                 <div class="new-badge" data-en="IMPROVED" data-es="MEJORADO">IMPROVED</div>
                 <div class="feature-icon">🧠</div>
                 <h3 class="feature-title" data-en="Smart Predictions" data-es="Predicciones Inteligentes">Smart Predictions</h3>
-                <p class="feature-description" data-en="Auto-correct, accent correction, and next-word suggestions powered by local learning and Groq's LLM. Rebalanced in v6.0 for sharper, more relevant suggestions — and the more you type, the smarter it gets." data-es="Autocorrección, corrección de acentos y sugerencias de siguiente palabra con aprendizaje local y el LLM de Groq. Rebalanceadas en v6.0 para sugerencias más precisas y relevantes — y cuanto más escribes, más inteligente se vuelve.">
-                    Auto-correct, accent correction, and next-word suggestions powered by local learning and Groq's LLM. Rebalanced in v6.0 for sharper, more relevant suggestions — and the more you type, the smarter it gets.
+                <p class="feature-description" data-en="Auto-correct, accent correction, and next-word suggestions powered by local learning and Groq's LLM. Rebalanced in v6.0 for sharper, more relevant suggestions, and the more you type, the smarter it gets." data-es="Autocorrección, corrección de acentos y sugerencias de siguiente palabra con aprendizaje local y el LLM de Groq. Rebalanceadas en v6.0 para sugerencias más precisas y relevantes, y cuanto más escribes, más inteligente se vuelve.">
+                    Auto-correct, accent correction, and next-word suggestions powered by local learning and Groq's LLM. Rebalanced in v6.0 for sharper, more relevant suggestions, and the more you type, the smarter it gets.
                 </p>
             </div>
             <div class="feature-card">
@@ -2902,27 +2901,27 @@
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="How much does GroqBoard cost?" data-es="¿Cuánto cuesta GroqBoard?">How much does GroqBoard cost?</div>
-                    <p class="faq-a" data-en="GroqBoard is free to try for 7 days — no credit card required. After the trial, you can unlock a lifetime license with a one-time payment (~$4.99 USD). No subscription, ever. Google Play adjusts the price to your local currency automatically." data-es="GroqBoard es gratis para probar durante 7 días, sin tarjeta de crédito. Después del periodo de prueba, puedes obtener una licencia de por vida con un único pago (aproximadamente $4.99 USD). Sin suscripciones. Google Play ajusta el precio a tu moneda local automáticamente.">GroqBoard is <strong>free to try for 7 days</strong> — no credit card required. After the trial, unlock a <strong>lifetime license</strong> with a one-time payment (~$4.99 USD). No subscription, ever. Google Play adjusts the price to your local currency automatically.</p>
+                    <p class="faq-a" data-en="GroqBoard is free to try for 7 days, no credit card required. After the trial, you can unlock a lifetime license with a one-time payment (~$4.99 USD). No subscription, ever. Google Play adjusts the price to your local currency automatically." data-es="GroqBoard es gratis para probar durante 7 días, sin tarjeta de crédito. Después del periodo de prueba, puedes obtener una licencia de por vida con un único pago (aproximadamente $4.99 USD). Sin suscripciones. Google Play ajusta el precio a tu moneda local automáticamente.">GroqBoard is <strong>free to try for 7 days</strong>, no credit card required. After the trial, unlock a <strong>lifetime license</strong> with a one-time payment (~$4.99 USD). No subscription, ever. Google Play adjusts the price to your local currency automatically.</p>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="What if I try it and don't like it?" data-es="¿Y si lo pruebo y no me convence?">What if I try it and don't like it?</div>
-                    <p class="faq-a" data-en="The 7-day free trial lets you test everything before paying — no risk at all. If you unlock the lifetime license and change your mind, Google Play gives you a refund window. Just open the app's page on the Play Store, tap Refund, and you're done." data-es="El período de prueba gratuito de 7 días te permite probar todo antes de pagar, sin ningún riesgo. Si obtienes la licencia de por vida y cambias de opinión, Google Play te da una ventana de reembolso. Solo abre la app en la Play Store, toca Reembolsar, y listo.">The 7-day free trial lets you test everything before paying — <strong>no risk at all</strong>. If you unlock the lifetime license and change your mind, Google Play gives you a refund window. Just open the app's page on the Play Store, tap <strong>Refund</strong>, and you're done.</p>
+                    <p class="faq-a" data-en="The 7-day free trial lets you test everything before paying, no risk at all. If you unlock the lifetime license and change your mind, Google Play gives you a refund window. Just open the app's page on the Play Store, tap Refund, and you're done." data-es="El período de prueba gratuito de 7 días te permite probar todo antes de pagar, sin ningún riesgo. Si obtienes la licencia de por vida y cambias de opinión, Google Play te da una ventana de reembolso. Solo abre la app en la Play Store, toca Reembolsar, y listo.">The 7-day free trial lets you test everything before paying, <strong>no risk at all</strong>. If you unlock the lifetime license and change your mind, Google Play gives you a refund window. Just open the app's page on the Play Store, tap <strong>Refund</strong>, and you're done.</p>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-q" data-en="I already purchased GroqBoard before v5.0 — do I need to pay again?" data-es="Ya compré GroqBoard antes de v5.0, ¿tengo que volver a pagar?">I already purchased GroqBoard before v5.0 — do I need to pay again?</div>
-                    <p class="faq-a" data-en="No! If you purchased GroqBoard before v5.0, your lifetime license is activated automatically — no action needed. If it doesn't appear, you can request an activation code by emailing support@groqboard.com." data-es="¡No! Si compraste GroqBoard antes de la versión 5.0, tu licencia de por vida se activa automáticamente, sin hacer nada. Si no aparece, puedes solicitar un código de activación escribiendo a support@groqboard.com.">No! If you purchased GroqBoard before v5.0, your <strong>lifetime license is activated automatically</strong> — no action needed. If it doesn't appear, you can request an activation code by emailing <a href="mailto:support@groqboard.com">support@groqboard.com</a>.</p>
+                    <div class="faq-q" data-en="I already purchased GroqBoard before v5.0. Do I need to pay again?" data-es="Ya compré GroqBoard antes de v5.0, ¿tengo que volver a pagar?">I already purchased GroqBoard before v5.0. Do I need to pay again?</div>
+                    <p class="faq-a" data-en="No! If you purchased GroqBoard before v5.0, your lifetime license is activated automatically, no action needed. If it doesn't appear, you can request an activation code by emailing support@groqboard.com." data-es="¡No! Si compraste GroqBoard antes de la versión 5.0, tu licencia de por vida se activa automáticamente, sin hacer nada. Si no aparece, puedes solicitar un código de activación escribiendo a support@groqboard.com.">No! If you purchased GroqBoard before v5.0, your <strong>lifetime license is activated automatically</strong>, no action needed. If it doesn't appear, you can request an activation code by emailing <a href="mailto:support@groqboard.com">support@groqboard.com</a>.</p>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="Why is GroqBoard so much cheaper than other AI keyboard apps?" data-es="¿Por qué GroqBoard es mucho más barato que otras apps de teclado con IA?">Why is GroqBoard so much cheaper than other AI keyboard apps?</div>
-                    <p class="faq-a" data-en="Most AI keyboard apps charge a monthly subscription because they pay for every transcription out of their own pocket — API costs add up fast. GroqBoard works differently: you connect your own free Groq API key, and your audio goes directly from your phone to Groq's servers. GroqBoard never pays for your usage, which means no per-user cost and no reason to charge a subscription. You get the same state-of-the-art AI for a one-time $4.99 instead of $10–30/month." data-es="La mayoría de las apps de teclado con IA cobran una suscripción mensual porque ellas pagan cada transcripción de su propio bolsillo, y los costos de API se acumulan rápido. GroqBoard funciona diferente: tú conectas tu propia API key gratuita de Groq, y tu audio va directamente de tu teléfono a los servidores de Groq. GroqBoard nunca paga por tu uso, lo que significa que no hay costo por usuario y no hay razón para cobrar suscripción. Obtienes la misma IA de última generación por un único pago de $4.99 en lugar de $10–30 al mes.">Most AI keyboard apps charge a monthly subscription because <strong>they pay for every transcription out of their own pocket</strong> — API costs add up fast. GroqBoard works differently: you connect your own free Groq API key, and your audio goes directly from your phone to Groq's servers. GroqBoard never pays for your usage, which means no per-user cost and no reason to charge a subscription. You get the same state-of-the-art AI for a <strong>one-time $4.99</strong> instead of $10–30/month.</p>
+                    <p class="faq-a" data-en="Most AI keyboard apps charge a monthly subscription because they pay for every transcription out of their own pocket, and API costs add up fast. GroqBoard works differently: you connect your own free Groq API key, and your audio goes directly from your phone to Groq's servers. GroqBoard never pays for your usage, which means no per-user cost and no reason to charge a subscription. You get the same state-of-the-art AI for a one-time $4.99 instead of $10-30/month." data-es="La mayoría de las apps de teclado con IA cobran una suscripción mensual porque ellas pagan cada transcripción de su propio bolsillo, y los costos de API se acumulan rápido. GroqBoard funciona diferente: tú conectas tu propia API key gratuita de Groq, y tu audio va directamente de tu teléfono a los servidores de Groq. GroqBoard nunca paga por tu uso, lo que significa que no hay costo por usuario y no hay razón para cobrar suscripción. Obtienes la misma IA de última generación por un único pago de $4.99 en lugar de $10-30 al mes.">Most AI keyboard apps charge a monthly subscription because <strong>they pay for every transcription out of their own pocket</strong>, and API costs add up fast. GroqBoard works differently: you connect your own free Groq API key, and your audio goes directly from your phone to Groq's servers. GroqBoard never pays for your usage, which means no per-user cost and no reason to charge a subscription. You get the same state-of-the-art AI for a <strong>one-time $4.99</strong> instead of $10-30/month.</p>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="What AI model does it use?" data-es="¿Qué modelo de IA usa?">What AI model does it use?</div>
-                    <p class="faq-a" data-en="Voice recognition runs on Whisper v3 Large, one of the most accurate speech-to-text models available, running on Groq's ultra-fast hardware. Smart predictions, AI editing, and Smart Actions use a LLaMA model via Groq by default. In v6.0 you can also switch to OpenRouter and pick any model you want — Claude, GPT, Gemini, Llama, Mistral and more — by pasting an API key from openrouter.ai." data-es="El reconocimiento de voz usa Whisper v3 Large, uno de los modelos de voz a texto más precisos, corriendo en el hardware ultra-rápido de Groq. Las predicciones, la edición con IA y Smart Actions usan un modelo LLaMA vía Groq por defecto. Desde v6.0 también puedes cambiar a OpenRouter y elegir el modelo que quieras — Claude, GPT, Gemini, Llama, Mistral y más — pegando una API key de openrouter.ai.">Voice recognition runs on <strong>Whisper v3 Large</strong>, one of the most accurate speech-to-text models available, running on Groq's ultra-fast hardware. Smart predictions, AI editing, and Smart Actions use a <strong>LLaMA model via Groq</strong> by default. In v6.0 you can also switch to <strong>OpenRouter</strong> and pick any model you want — Claude, GPT, Gemini, Llama, Mistral and more — by pasting an API key from <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a>.</p>
+                    <p class="faq-a" data-en="Voice recognition runs on Whisper v3 Large, one of the most accurate speech-to-text models available, running on Groq's ultra-fast hardware. Smart predictions, AI editing, and Smart Actions use a LLaMA model via Groq by default. In v6.0 you can also switch to OpenRouter and pick any model you want: Claude, GPT, Gemini, Llama, Mistral and more, by pasting an API key from openrouter.ai." data-es="El reconocimiento de voz usa Whisper v3 Large, uno de los modelos de voz a texto más precisos, corriendo en el hardware ultra-rápido de Groq. Las predicciones, la edición con IA y Smart Actions usan un modelo LLaMA vía Groq por defecto. Desde v6.0 también puedes cambiar a OpenRouter y elegir el modelo que quieras: Claude, GPT, Gemini, Llama, Mistral y más, pegando una API key de openrouter.ai.">Voice recognition runs on <strong>Whisper v3 Large</strong>, one of the most accurate speech-to-text models available, running on Groq's ultra-fast hardware. Smart predictions, AI editing, and Smart Actions use a <strong>LLaMA model via Groq</strong> by default. In v6.0 you can also switch to <strong>OpenRouter</strong> and pick any model you want: Claude, GPT, Gemini, Llama, Mistral and more, by pasting an API key from <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a>.</p>
                 </div>
 
                 <div class="faq-item">
@@ -3016,7 +3015,7 @@ Package: com.alegol.groqboard</div>
     <section class="contact" id="contact">
         <div class="section-header">
             <div class="section-label" data-en="Get in Touch" data-es="Contactanos">Get in Touch</div>
-            <h2 class="section-title" data-en="Contact Us" data-es="Contacto">Contact Us</h2>
+            <h2 class="section-title" data-en="Contact Support" data-es="Contacto">Contact Support</h2>
             <p class="section-description" data-en="Have a question, feature request, or found a bug? We'd love to hear from you." data-es="Tienes alguna pregunta, sugerencia de funcion, o encontraste un error? Nos encantaria escucharte.">
                 Have a question, feature request, or found a bug? We'd love to hear from you.
             </p>
