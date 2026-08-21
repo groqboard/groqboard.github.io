@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - GroqBoard</title>
+    <meta name="description" content="Terms of Service for GroqBoard - AI Voice Keyboard for Android">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --groq-orange: #f55036;
+            --groq-orange-light: #ff6b4a;
+            --bg-dark: #0a0a0a;
+            --bg-card: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #888888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.8);
+            border-bottom: 1px solid rgba(245, 80, 54, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-cta {
+            background: var(--groq-orange);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(245, 80, 54, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(245, 80, 54, 0.4);
+            background: var(--groq-orange-light);
+        }
+
+        /* Main Content */
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .privacy-header p {
+            color: var(--text-secondary);
+        }
+
+        .privacy-content {
+            background: var(--bg-card);
+            border-radius: 24px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .privacy-content h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--groq-orange);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .privacy-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .privacy-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .privacy-content ul {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .privacy-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-content strong {
+            color: var(--text-primary);
+        }
+
+        .privacy-content a {
+            color: var(--groq-orange);
+            text-decoration: none;
+        }
+
+        .privacy-content a:hover {
+            text-decoration: underline;
+        }
+
+        .effective-date {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--groq-orange);
+        }
+
+        .footer-credit {
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .privacy-container {
+                padding: 6rem 1rem 2rem;
+            }
+
+            .privacy-content {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-icon"><img src="https://play-lh.googleusercontent.com/vUOMqqK6EwJV11uak0phYo5sMmTLYl2fB1Joh_SaLukbKyA13CFMbYGrp24RzTgiArwp1nL8GhItWpkclGwsIg=w240-h480" alt="GroqBoard"></div>
+            <span class="logo-text">GroqBoard</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.alegol.groqboard" class="nav-cta" target="_blank">Get the App</a>
+    </nav>
+
+    <!-- Privacy Policy Content -->
+    <div class="privacy-container">
+        <div class="privacy-header">
+            <h1>Terms of Service</h1>
+            <p>Last updated: October 1, 2026</p>
+        </div>
+
+        <div class="privacy-content">
+
+            <h2>1. Who you are agreeing with</h2>
+            <p>GroqBoard (the "Application") is created and operated by Alex Goldberg (the "Service Provider"). These Terms govern your use of the Application and of the API key included subscription. By installing or using the Application you accept these Terms. If you do not accept them, do not use the Application.</p>
+            <p>These Terms are in addition to the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms of Service</a>, which govern every purchase you make through Google Play.</p>
+
+            <h2>2. The two ways to use GroqBoard</h2>
+            <p><strong>Bring your own key. Free.</strong> You create your own API key with Groq, OpenRouter or Soniox, enter it in Settings, and every feature of the Application works. You pay your AI provider directly, under your own account and their terms. The Service Provider charges you nothing and places no usage limits on you.</p>
+            <p><strong>API key included. $2.99 per month.</strong> The Service Provider supplies the AI key, so you configure nothing. Your requests pass through the Service Provider's proxy on the way to the AI provider. This plan carries the fair use limits described in section 5.</p>
+            <p>You can switch between the two at any time. Cancelling the subscription does not disable the Application: it returns to the free plan, where you use your own key.</p>
+
+            <h2>3. Subscription terms</h2>
+            <ul>
+                <li><strong>Price:</strong> $2.99 USD per month, or the equivalent that Google Play shows in your local currency, taxes included where they apply.</li>
+                <li><strong>Billing period:</strong> monthly.</li>
+                <li><strong>Automatic renewal:</strong> the subscription renews automatically at the end of every period, and your payment method is charged, unless you cancel at least 24 hours before the period ends.</li>
+                <li><strong>Free trial:</strong> new subscribers get 7 days free. Google Play requires a payment method to start it. If you do not cancel before the 7 days are over, the first month is charged automatically. Only one trial per person, and it is available only to people who have never had any GroqBoard subscription.</li>
+                <li><strong>How to cancel:</strong> open the Google Play Store, go to Menu, then Subscriptions, select GroqBoard and tap Cancel. You can also reach that screen from Settings inside the Application. Cancelling stops future charges; you keep the plan until the period you already paid for runs out.</li>
+                <li><strong>Price changes:</strong> if the price ever changes, Google Play notifies you in advance and asks for your consent where the law requires it. You can always cancel instead.</li>
+            </ul>
+
+            <h2>4. Refunds</h2>
+            <p>Payments are processed by Google Play, and refunds follow Google Play's refund policy rather than a separate policy of ours. The free trial exists so you can test the Application before any money changes hands. If something went wrong with a charge, write to <a href="mailto:support@groqboard.com">support@groqboard.com</a> and the Service Provider will try to help, but the final decision on a refund belongs to Google.</p>
+
+            <h2>5. Fair use limits on the API key included plan</h2>
+            <p>On the paid plan the Service Provider pays the AI provider for your usage, so that plan carries limits. They are set far above normal use, and they exist to stop runaway usage, shared credentials and software faults, not to ration ordinary dictation:</p>
+            <ul>
+                <li><strong>2 hours of dictation per day</strong>, and <strong>20 hours per month</strong>. For scale, heavy daily use is around 20 minutes.</li>
+                <li><strong>10 MB per individual request.</strong> A 15 second dictation is roughly 30 KB.</li>
+                <li>Reasonable daily limits on AI text editing and read aloud requests.</li>
+            </ul>
+            <p>If you reach a limit, the Application tells you which one and when it resets. Your subscription is not cancelled and nothing is lost. You can also switch to your own API key at any moment and continue with no limit from us. The Service Provider may adjust these limits, and will not lower them in a way that affects normal use without notice.</p>
+
+            <h2>6. The lifetime licence</h2>
+            <p>Before version 11, GroqBoard sold a one-time licence that unlocked the Application. If you bought it, it remains yours and the Application keeps working exactly as it did: you always used your own API key, and that is now free for everyone. In addition, holders of that licence receive 6 months of the API key included plan at no charge, applied automatically, with nothing to claim and no code to enter. The one-time licence is no longer sold to new users.</p>
+
+            <h2>7. Acceptable use</h2>
+            <p>You agree not to use the Application, and in particular not to use the API key included plan, to:</p>
+            <ul>
+                <li>Extract, share, resell or automate access to the Service Provider's AI credentials or access passes, or use the proxy as a general purpose API for anything other than the Application itself.</li>
+                <li>Break the law, infringe someone else's rights, or record people without the consent that your jurisdiction requires.</li>
+                <li>Attempt to disrupt, overload or reverse engineer the service.</li>
+            </ul>
+            <p>The Service Provider may suspend access to the paid plan if it is used this way. If that happens to you and you believe it was a mistake, write to support and it will be reviewed.</p>
+
+            <h2>8. Third-party AI providers</h2>
+            <p>The Application is a front end for third-party AI services. On both plans your audio and text are sent to an AI provider for processing, and each provider handles that data under its own terms and privacy policy. On the free plan you have your own account with that provider and the relationship is directly between you and them. On the paid plan the Service Provider holds the account. What is sent, and what is kept, is described in the <a href="privacy.html">Privacy Policy</a>, which forms part of these Terms.</p>
+
+            <h2>9. Availability</h2>
+            <p>The Application is provided "as is" and "as available". AI providers and the network can be slow, can fail, and can change their models or their pricing without warning, and the Service Provider does not control them. No guarantee is made that the service will be uninterrupted, error free, or that transcriptions and AI edits will be accurate. Check anything that matters before you send it.</p>
+
+            <h2>10. Limitation of liability</h2>
+            <p>To the maximum extent permitted by law, the Service Provider is not liable for indirect or consequential damages, lost data, lost profits, or anything arising from your use of the Application or of any third-party AI provider. Where liability cannot be excluded, it is limited to the amount you paid for the Application in the 12 months before the claim. Nothing in these Terms limits rights that consumer law in your country gives you and does not allow to be waived.</p>
+
+            <h2>11. Changes to these Terms</h2>
+            <p>These Terms may be updated. The updated version is published on this page with a new date at the top. Continued use of the Application after a change means you accept it. If a change affects the subscription in a way that requires your consent, Google Play will ask for it.</p>
+
+            <h2>12. Ending the agreement</h2>
+            <p>You can end this agreement at any time by cancelling any subscription and uninstalling the Application. The Service Provider may end it if you breach these Terms, or may discontinue the Application, in which case any unused paid period will be handled through Google Play.</p>
+
+            <h2>13. Governing law</h2>
+            <p>These Terms are governed by the laws of Mexico, without regard to conflict of law rules, and without depriving you of the protection of the mandatory consumer law of your country of residence.</p>
+
+            <h2>14. Contact</h2>
+            <p>Questions about these Terms go to <a href="mailto:support@groqboard.com">support@groqboard.com</a>.</p>
+
+            <p class="effective-date">These Terms of Service are effective as of October 1, 2026</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="mailto:support@groqboard.com?subject=GroqBoard%20Support">Support</a>
+            <a href="https://play.google.com/store/apps/details?id=com.alegol.groqboard" target="_blank">Google Play</a>
+        </div>
+        <p class="footer-credit">&copy; 2026 GroqBoard by Alex Goldberg</p>
+    </footer>
+</body>
+</html>
