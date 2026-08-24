@@ -1284,24 +1284,6 @@
             display: block;
         }
 
-        /* Paywall price overlay */
-        .paywall-wrap { position: relative; }
-        .price-chip {
-            position: absolute;
-            top: 47%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #000;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 800;
-            padding: 7px 14px;
-            border-radius: 6px;
-            white-space: nowrap;
-            pointer-events: none;
-            font-family: inherit;
-        }
-
         /* Watch screenshot */
         .screenshot-item.watch {
             width: 200px;
@@ -2437,7 +2419,7 @@
                     <!-- Free trial -->
                     <div class="trust-pill refund">
                         <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg>
-                        <span data-en="7-day free trial · No credit card needed" data-es="7 días de prueba gratis · Sin tarjeta">7-day free trial · No credit card needed</span>
+                        <span data-en="Free with your own API key" data-es="Gratis con tu propia API key">Free with your own API key</span>
                     </div>
                 </div>
 
@@ -2728,9 +2710,8 @@
             <div class="screenshot-item phone">
                 <img src="pic_v5_6_predictions_clean.png?v=2" alt="GroqBoard smart word predictions powered by AI">
             </div>
-            <div class="screenshot-item phone paywall-wrap">
-                <img src="pic_v5_3_paywall_clean.png?v=2" alt="GroqBoard lifetime license - one-time payment, no subscription">
-                <span class="price-chip">$4.99 USD</span>
+            <div class="screenshot-item phone">
+                <img src="pic_v5_3_paywall_clean.png?v=2" alt="GroqBoard plan chooser: free with your own API key, or a monthly plan with the key included">
             </div>
             <div class="screenshot-item phone">
                 <img src="pic_v5_2_settings_clean.png?v=2" alt="GroqBoard settings - languages, floating bubble and custom vocabulary">
@@ -2767,9 +2748,9 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3 class="step-title" data-en="Add Your Groq API Key" data-es="Agrega Tu Clave API de Groq">Add Your Groq API Key</h3>
-                    <p class="step-description" data-en="Get your free API key at console.groq.com and paste it into the settings. Simple signup, no credit card needed." data-es="Obtén tu clave API gratis en console.groq.com y pégala en la configuración. Registro simple, sin tarjeta de crédito.">
-                        Get your free API key at <a href="https://console.groq.com" target="_blank">console.groq.com</a> and paste it into the settings. Simple signup, no credit card needed.
+                    <h3 class="step-title" data-en="Add a Key, or Skip It" data-es="Agrega una llave, o sáltatelo">Add a Key, or Skip It</h3>
+                    <p class="step-description" data-en="Get a free API key at console.groq.com and paste it into Settings. Signup is simple and asks for no credit card. Or take the monthly plan and skip this step entirely: the key is included and there is nothing to set up." data-es="Obtén una API key gratis en console.groq.com y pégala en Ajustes. El registro es simple y no pide tarjeta. O toma el plan mensual y sáltate este paso por completo: la llave viene incluida y no hay nada que configurar.">
+                        Get a free API key at <a href="https://console.groq.com" target="_blank">console.groq.com</a> and paste it into Settings. Signup is simple and asks for no credit card. Or take the <strong>monthly plan</strong> and skip this step entirely: the key is included and there is nothing to set up.
                     </p>
                 </div>
             </div>
