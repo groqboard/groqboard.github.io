@@ -1255,12 +1255,19 @@
             display: block;
         }
 
-        /* Phone screenshots: no container border, mockup frame is built-in */
+        /* Phone screenshots. The v5 images carried a device mockup painted into the PNG,
+           so the container deliberately added nothing. The v11 ones are raw ADB captures
+           with no frame of their own, which left them as flat rectangles next to the
+           keyboard and watch shots. The frame moves to CSS, same bezel as .keyboard, so
+           every tile in the gallery is drawn by one rule instead of six of them relying
+           on whoever exported the image. */
         .screenshot-item.phone {
             width: 200px;
-            height: 467px;
-            border-radius: 0;
-            overflow: visible;
+            height: auto;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 12px;
+            box-shadow: 0 0 0 10px #3a3a3a, 0 0 0 11px #646464, 0 20px 40px rgba(0,0,0,0.4);
         }
 
         .screenshot-item.phone img {
@@ -1298,10 +1305,12 @@
             object-fit: cover;
         }
 
-        /* Video demo item: same width as phone, height matches phone frame (860×2005 → 200×467) */
+        /* Video demo item: same width as phone, and the same height, so the row lines up.
+           The 467 came from the old 860x2005 mockups; the v11 captures are 540x1210, which
+           lands at 448 once the frame is drawn by CSS instead of baked into the PNG. */
         .screenshot-item.video-item {
             width: 200px;
-            height: 467px;
+            height: 448px;
             background: #0d0d0d;
             border: 1px solid rgba(245, 80, 54, 0.4);
             box-shadow: 0 0 30px rgba(245, 80, 54, 0.12), 0 15px 40px rgba(0,0,0,0.4);
