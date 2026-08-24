@@ -80,7 +80,7 @@
                         "name": "How much does GroqBoard cost?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "GroqBoard is free to try for 7 days, no credit card required. After the trial, you can unlock a lifetime license with a one-time payment (~$4.99 USD). No subscription, ever. Google Play adjusts the price to your local currency automatically."
+                                "text": "GroqBoard is free. Bring your own API key from Groq, OpenRouter or Soniox and the whole app works, with nothing to pay us. If you would rather not deal with keys at all, the monthly plan includes the key for about $2.99 USD a month: nothing to set up, and always on our best models. Google Play adjusts the price to your local currency automatically."
                         }
                 },
                 {
@@ -88,7 +88,7 @@
                         "name": "What if I try it and don't like it?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "The 7-day free trial lets you test everything before paying, no risk at all. If you unlock the lifetime license and change your mind, Google Play gives you a refund window. Just open the app's page on the Play Store, tap Refund, and you're done."
+                                "text": "You do not have to pay to find out. The free option is the whole app and not a demo, so you can use it for as long as you like with your own key. If you take the monthly plan and change your mind, you cancel it in Google Play in two taps and it stops at the end of the period, and Google Play has a refund window on top of that."
                         }
                 },
                 {
@@ -104,7 +104,7 @@
                         "name": "I already purchased GroqBoard before v5.0. Do I need to pay again?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "No! If you purchased GroqBoard before v5.0, your lifetime license is activated automatically, no action needed. If it doesn't appear, you can request an activation code by emailing support@groqboard.com."
+                                "text": "No, and you get something extra. Your lifetime license stays yours and keeps working with your own API key, exactly as before. On top of that you get 6 months of the monthly plan on us, so you can use GroqBoard's key without setting anything up. It is a switch in Settings and never a replacement: your own key stays saved and one tap brings it back."
                         }
                 },
                 {
@@ -112,7 +112,7 @@
                         "name": "Why is GroqBoard so much cheaper than other AI keyboard apps?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Most AI keyboard apps charge a monthly subscription because they pay for every transcription out of their own pocket, and API costs add up fast. GroqBoard works differently: you connect your own free Groq API key, and your audio goes directly from your phone to Groq's servers. GroqBoard never pays for your usage, which means no per-user cost and no reason to charge a subscription. You get the same state-of-the-art AI for a one-time $4.99 instead of $10-30/month."
+                                "text": "Because you are not forced to pay for something you can get yourself. Most AI keyboards pay for every transcription out of their own pocket and charge $10 to $30 a month to cover it. GroqBoard's free option skips that entirely: you bring your own key, your audio goes straight from your phone to that provider, and we never touch your usage or your bill. The $2.99 plan exists only for people who would rather not create an account with an AI provider at all, and it is still a fraction of what the others charge."
                         }
                 },
                 {
@@ -120,7 +120,15 @@
                         "name": "What AI model does it use?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Voice recognition runs on Whisper v3 Large, one of the most accurate speech-to-text models available, running on Groq's ultra-fast hardware. Smart predictions, AI editing, and Smart Actions use an OpenAI gpt-oss model via Groq by default. In v6.0 you can also switch to OpenRouter and pick any model you want: Claude, GPT, Gemini, Llama, Mistral and more, by pasting an API key from openrouter.ai."
+                                "text": "Dictation runs on Whisper Large v3 Turbo on Groq's hardware, one of the fastest and most accurate speech-to-text setups available. Predictions, AI editing and Smart Actions run on OpenAI gpt-oss models through Groq. With your own key you can also switch to OpenRouter and pick any model you want: Claude, GPT, Gemini, Llama, Mistral and more, by pasting a key from openrouter.ai."
+                        }
+                },
+                {
+                        "@type": "Question",
+                        "name": "Does the monthly plan get better models than bringing my own key?",
+                        "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "The models are the same today, but they do not stay in step. On the monthly plan we choose the engine on our side, so the day a faster or more accurate model appears, everyone on the plan moves to it at once, with no app update and nothing to change in Settings. With your own key you choose the model yourself, which means you keep exactly the one you picked until you go and change it. Neither one is better: one is hands-off, the other is hands-on."
                         }
                 },
                 {
@@ -160,7 +168,7 @@
                         "name": "Is GroqBoard private and secure?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "Your audio goes from your phone straight to the AI provider you chose, using your own API key. There is no GroqBoard server in the middle, because there is no GroqBoard server at all, which is also why there is no subscription. Your API keys, snippets, custom vocabulary and learned words stay on your device. Transcription history is kept locally and you can clear it whenever you want."
+                                "text": "It depends on which option you use, and the difference is worth knowing. With your own API key, your audio goes from your phone straight to the provider you chose and there is no GroqBoard server in the middle at all. On the monthly plan it passes through api.groqboard.com, which holds the key on your behalf and forwards the request; what we keep there is a 24 hour access pass, an anonymous account id and a counter of how much you used, never your audio and never your transcripts. Either way, your API keys, snippets, custom vocabulary and learned words stay on your device, and transcription history is local and you can clear it whenever you want."
                         }
                 },
                 {
@@ -168,7 +176,7 @@
                         "name": "What is the best AI voice keyboard for Android?",
                         "acceptedAnswer": {
                                 "@type": "Answer",
-                                "text": "We are obviously biased, so here is what to compare on instead of taking our word for it: accuracy of the speech model, how it charges you, and whether it makes you abandon your keyboard. GroqBoard runs Whisper v3 Large on Groq's hardware, charges one payment of about $4.99 instead of $10-30 every month, and since v10 it can dock onto Gboard, SwiftKey or Samsung Keyboard rather than replacing them. There is a 7-day trial with no credit card, so you can check all three claims yourself."
+                                "text": "We are obviously biased, so here is what to compare on instead of taking our word for it: accuracy of the speech model, how it charges you, and whether it makes you abandon your keyboard. GroqBoard runs Whisper Large v3 Turbo on Groq's hardware; it is free with your own API key and about $2.99 a month if you want the key included, against the $10 to $30 a month the others charge; and since v10 it docks onto Gboard, SwiftKey or Samsung Keyboard rather than replacing them. You can check all three claims without paying anything."
                         }
                 }
         ]
@@ -1274,24 +1282,6 @@
             height: 100%;
             width: auto;
             display: block;
-        }
-
-        /* Paywall price overlay */
-        .paywall-wrap { position: relative; }
-        .price-chip {
-            position: absolute;
-            top: 47%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #000;
-            color: #fff;
-            font-size: 14px;
-            font-weight: 800;
-            padding: 7px 14px;
-            border-radius: 6px;
-            white-space: nowrap;
-            pointer-events: none;
-            font-family: inherit;
         }
 
         /* Watch screenshot */
@@ -2429,7 +2419,7 @@
                     <!-- Free trial -->
                     <div class="trust-pill refund">
                         <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-3-3 1.41-1.41L11 12.17l4.59-4.58L17 9l-6 6z"/></svg>
-                        <span data-en="7-day free trial · No credit card needed" data-es="7 días de prueba gratis · Sin tarjeta">7-day free trial · No credit card needed</span>
+                        <span data-en="Free with your own API key" data-es="Gratis con tu propia API key">Free with your own API key</span>
                     </div>
                 </div>
 
@@ -2709,23 +2699,22 @@
                 </div>
             </div>
             <div class="screenshot-item phone">
-                <img src="pic_v5_4_mic_main_clean.png?v=2" alt="GroqBoard AI voice keyboard for Android - voice typing interface">
+                <img src="pic_v11_2_voice_keyboard.png?v=11" alt="GroqBoard voice keyboard: one big dictation button, magic wand and one-tap language switching">
             </div>
             <div class="screenshot-item phone">
-                <img src="pic_v5_5_qwerty_clean.png?v=2" alt="GroqBoard full QWERTY keyboard with swipe typing and smart predictions">
+                <img src="pic_v11_4_smart_actions.png?v=11" alt="GroqBoard Smart Actions: fix grammar, improve or formalize the text you just wrote">
             </div>
             <div class="screenshot-item phone">
-                <img src="pic_v5_7_bubble_clean.png?v=2" alt="GroqBoard floating bubble - dictate in any app">
+                <img src="pic_v11_1_fixed_button.png?v=11" alt="GroqBoard dictation button docked on the top row of Microsoft SwiftKey">
             </div>
             <div class="screenshot-item phone">
-                <img src="pic_v5_6_predictions_clean.png?v=2" alt="GroqBoard smart word predictions powered by AI">
-            </div>
-            <div class="screenshot-item phone paywall-wrap">
-                <img src="pic_v5_3_paywall_clean.png?v=2" alt="GroqBoard lifetime license - one-time payment, no subscription">
-                <span class="price-chip">$4.99 USD</span>
+                <img src="pic_v11_3_predictions.png?v=11" alt="GroqBoard full QWERTY keyboard with AI next-word prediction chips">
             </div>
             <div class="screenshot-item phone">
-                <img src="pic_v5_2_settings_clean.png?v=2" alt="GroqBoard settings - languages, floating bubble and custom vocabulary">
+                <img src="pic_v11_6_paywall.png?v=11" alt="GroqBoard plan chooser: free with your own API key, or a monthly plan with the key included">
+            </div>
+            <div class="screenshot-item phone">
+                <img src="pic_v11_5_settings.png?v=11" alt="GroqBoard settings on the monthly plan: no keys and no models to pick">
             </div>
             <div class="screenshot-item keyboard">
                 <img src="zoom.png" alt="GroqBoard keyboard layout close-up">
@@ -2759,9 +2748,9 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3 class="step-title" data-en="Add Your Groq API Key" data-es="Agrega Tu Clave API de Groq">Add Your Groq API Key</h3>
-                    <p class="step-description" data-en="Get your free API key at console.groq.com and paste it into the settings. Simple signup, no credit card needed." data-es="Obtén tu clave API gratis en console.groq.com y pégala en la configuración. Registro simple, sin tarjeta de crédito.">
-                        Get your free API key at <a href="https://console.groq.com" target="_blank">console.groq.com</a> and paste it into the settings. Simple signup, no credit card needed.
+                    <h3 class="step-title" data-en="Add a Key, or Skip It" data-es="Agrega una llave, o sáltatelo">Add a Key, or Skip It</h3>
+                    <p class="step-description" data-en="Get a free API key at console.groq.com and paste it into Settings. Signup is simple and asks for no credit card. Or take the monthly plan and skip this step entirely: the key is included and there is nothing to set up." data-es="Obtén una API key gratis en console.groq.com y pégala en Ajustes. El registro es simple y no pide tarjeta. O toma el plan mensual y sáltate este paso por completo: la llave viene incluida y no hay nada que configurar.">
+                        Get a free API key at <a href="https://console.groq.com" target="_blank">console.groq.com</a> and paste it into Settings. Signup is simple and asks for no credit card. Or take the <strong>monthly plan</strong> and skip this step entirely: the key is included and there is nothing to set up.
                     </p>
                 </div>
             </div>
@@ -2988,12 +2977,12 @@
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="How much does GroqBoard cost?" data-es="¿Cuánto cuesta GroqBoard?">How much does GroqBoard cost?</div>
-                    <p class="faq-a" data-en="GroqBoard is free to try for 7 days, no credit card required. After the trial, you can unlock a lifetime license with a one-time payment (~$4.99 USD). No subscription, ever. Google Play adjusts the price to your local currency automatically." data-es="GroqBoard es gratis para probar durante 7 días, sin tarjeta de crédito. Después del periodo de prueba, puedes obtener una licencia de por vida con un único pago (aproximadamente $4.99 USD). Sin suscripciones. Google Play ajusta el precio a tu moneda local automáticamente.">GroqBoard is <strong>free to try for 7 days</strong>, no credit card required. After the trial, unlock a <strong>lifetime license</strong> with a one-time payment (~$4.99 USD). No subscription, ever. Google Play adjusts the price to your local currency automatically.</p>
+                    <p class="faq-a" data-en="GroqBoard is free. Bring your own API key from Groq, OpenRouter or Soniox and the whole app works, with nothing to pay us. If you would rather not deal with keys at all, the monthly plan includes the key for about $2.99 USD a month: nothing to set up, and always on our best models. Google Play adjusts the price to your local currency automatically." data-es="GroqBoard es gratis. Trae tu propia API key de Groq, OpenRouter o Soniox y la app funciona completa, sin pagarnos nada. Si prefieres no lidiar con llaves, el plan mensual incluye la llave por unos $2.99 USD al mes: no hay nada que configurar y siempre corres nuestros mejores modelos. Google Play ajusta el precio a tu moneda local automáticamente.">GroqBoard is <strong>free</strong>. Bring your own API key from Groq, OpenRouter or Soniox and the whole app works, with nothing to pay us. If you would rather not deal with keys at all, the <strong>monthly plan</strong> includes the key for about $2.99 USD a month: nothing to set up, and always on our best models. Google Play adjusts the price to your local currency automatically.</p>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="What if I try it and don't like it?" data-es="¿Y si lo pruebo y no me convence?">What if I try it and don't like it?</div>
-                    <p class="faq-a" data-en="The 7-day free trial lets you test everything before paying, no risk at all. If you unlock the lifetime license and change your mind, Google Play gives you a refund window. Just open the app's page on the Play Store, tap Refund, and you're done." data-es="El período de prueba gratuito de 7 días te permite probar todo antes de pagar, sin ningún riesgo. Si obtienes la licencia de por vida y cambias de opinión, Google Play te da una ventana de reembolso. Solo abre la app en la Play Store, toca Reembolsar, y listo.">The 7-day free trial lets you test everything before paying, <strong>no risk at all</strong>. If you unlock the lifetime license and change your mind, Google Play gives you a refund window. Just open the app's page on the Play Store, tap <strong>Refund</strong>, and you're done.</p>
+                    <p class="faq-a" data-en="You do not have to pay to find out. The free option is the whole app and not a demo, so you can use it for as long as you like with your own key. If you take the monthly plan and change your mind, you cancel it in Google Play in two taps and it stops at the end of the period, and Google Play has a refund window on top of that." data-es="No tienes que pagar para averiguarlo. La opción gratis es la app completa, no una demo, así que puedes usarla el tiempo que quieras con tu propia llave. Si tomas el plan mensual y cambias de opinión, lo cancelas en Google Play en dos toques y se detiene al final del periodo, y además Google Play tiene una ventana de reembolso.">You do not have to pay to find out. The free option is <strong>the whole app</strong> and not a demo, so you can use it for as long as you like with your own key. If you take the monthly plan and change your mind, you cancel it in Google Play in two taps and it stops at the end of the period, and Google Play has a <strong>refund window</strong> on top of that.</p>
                 </div>
 
                 <div class="faq-item">
@@ -3003,17 +2992,22 @@
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="I already purchased GroqBoard before v5.0. Do I need to pay again?" data-es="Ya compré GroqBoard antes de v5.0, ¿tengo que volver a pagar?">I already purchased GroqBoard before v5.0. Do I need to pay again?</div>
-                    <p class="faq-a" data-en="No! If you purchased GroqBoard before v5.0, your lifetime license is activated automatically, no action needed. If it doesn't appear, you can request an activation code by emailing support@groqboard.com." data-es="¡No! Si compraste GroqBoard antes de la versión 5.0, tu licencia de por vida se activa automáticamente, sin hacer nada. Si no aparece, puedes solicitar un código de activación escribiendo a support@groqboard.com.">No! If you purchased GroqBoard before v5.0, your <strong>lifetime license is activated automatically</strong>, no action needed. If it doesn't appear, you can request an activation code by emailing <a href="mailto:support@groqboard.com">support@groqboard.com</a>.</p>
+                    <p class="faq-a" data-en="No, and you get something extra. Your lifetime license stays yours and keeps working with your own API key, exactly as before. On top of that you get 6 months of the monthly plan on us, so you can use GroqBoard's key without setting anything up. It is a switch in Settings and never a replacement: your own key stays saved and one tap brings it back." data-es="No, y además ganas algo. Tu licencia de por vida sigue siendo tuya y sigue funcionando con tu propia API key, igual que antes. Encima te regalamos 6 meses del plan mensual, así que puedes usar la llave de GroqBoard sin configurar nada. Es un interruptor en Ajustes y nunca un reemplazo: tu llave sigue guardada y un toque te regresa a ella.">No, and you get something extra. Your <strong>lifetime license stays yours</strong> and keeps working with your own API key, exactly as before. On top of that you get <strong>6 months of the monthly plan on us</strong>, so you can use GroqBoard's key without setting anything up. It is a switch in Settings and never a replacement: your own key stays saved and one tap brings it back.</p>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="Why is GroqBoard so much cheaper than other AI keyboard apps?" data-es="¿Por qué GroqBoard es mucho más barato que otras apps de teclado con IA?">Why is GroqBoard so much cheaper than other AI keyboard apps?</div>
-                    <p class="faq-a" data-en="Most AI keyboard apps charge a monthly subscription because they pay for every transcription out of their own pocket, and API costs add up fast. GroqBoard works differently: you connect your own free Groq API key, and your audio goes directly from your phone to Groq's servers. GroqBoard never pays for your usage, which means no per-user cost and no reason to charge a subscription. You get the same state-of-the-art AI for a one-time $4.99 instead of $10-30/month." data-es="La mayoría de las apps de teclado con IA cobran una suscripción mensual porque ellas pagan cada transcripción de su propio bolsillo, y los costos de API se acumulan rápido. GroqBoard funciona diferente: tú conectas tu propia API key gratuita de Groq, y tu audio va directamente de tu teléfono a los servidores de Groq. GroqBoard nunca paga por tu uso, lo que significa que no hay costo por usuario y no hay razón para cobrar suscripción. Obtienes la misma IA de última generación por un único pago de $4.99 en lugar de $10-30 al mes.">Most AI keyboard apps charge a monthly subscription because <strong>they pay for every transcription out of their own pocket</strong>, and API costs add up fast. GroqBoard works differently: you connect your own free Groq API key, and your audio goes directly from your phone to Groq's servers. GroqBoard never pays for your usage, which means no per-user cost and no reason to charge a subscription. You get the same state-of-the-art AI for a <strong>one-time $4.99</strong> instead of $10-30/month.</p>
+                    <p class="faq-a" data-en="Because you are not forced to pay for something you can get yourself. Most AI keyboards pay for every transcription out of their own pocket and charge $10 to $30 a month to cover it. GroqBoard's free option skips that entirely: you bring your own key, your audio goes straight from your phone to that provider, and we never touch your usage or your bill. The $2.99 plan exists only for people who would rather not create an account with an AI provider at all, and it is still a fraction of what the others charge." data-es="Porque no te obligamos a pagar por algo que puedes conseguir tú mismo. La mayoría de los teclados con IA pagan cada transcripción de su bolsillo y cobran de $10 a $30 al mes para cubrirlo. La opción gratis de GroqBoard se salta todo eso: traes tu propia llave, tu audio va directo de tu teléfono a ese proveedor, y nosotros nunca tocamos tu uso ni tu cuenta. El plan de $2.99 existe solo para quien prefiere no crear una cuenta con un proveedor de IA, y aun así es una fracción de lo que cobran los demás.">Because you are not forced to pay for something you can get yourself. Most AI keyboards <strong>pay for every transcription out of their own pocket</strong> and charge $10 to $30 a month to cover it. GroqBoard's free option skips that entirely: you bring your own key, your audio goes straight from your phone to that provider, and we never touch your usage or your bill. The $2.99 plan exists only for people who would rather not create an account with an AI provider at all, and it is still a fraction of what the others charge.</p>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="What AI model does it use?" data-es="¿Qué modelo de IA usa?">What AI model does it use?</div>
-                    <p class="faq-a" data-en="Voice recognition runs on Whisper v3 Large, one of the most accurate speech-to-text models available, running on Groq's ultra-fast hardware. Smart predictions, AI editing, and Smart Actions use an OpenAI gpt-oss model via Groq by default. In v6.0 you can also switch to OpenRouter and pick any model you want: Claude, GPT, Gemini, Llama, Mistral and more, by pasting an API key from openrouter.ai." data-es="El reconocimiento de voz usa Whisper v3 Large, uno de los modelos de voz a texto más precisos, corriendo en el hardware ultra-rápido de Groq. Las predicciones, la edición con IA y Smart Actions usan un modelo gpt-oss de OpenAI vía Groq por defecto. Desde v6.0 también puedes cambiar a OpenRouter y elegir el modelo que quieras: Claude, GPT, Gemini, Llama, Mistral y más, pegando una API key de openrouter.ai.">Voice recognition runs on <strong>Whisper v3 Large</strong>, one of the most accurate speech-to-text models available, running on Groq's ultra-fast hardware. Smart predictions, AI editing, and Smart Actions use an <strong>OpenAI gpt-oss model via Groq</strong> by default. In v6.0 you can also switch to <strong>OpenRouter</strong> and pick any model you want: Claude, GPT, Gemini, Llama, Mistral and more, by pasting an API key from <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a>.</p>
+                    <p class="faq-a" data-en="Dictation runs on Whisper Large v3 Turbo on Groq's hardware, one of the fastest and most accurate speech-to-text setups available. Predictions, AI editing and Smart Actions run on OpenAI gpt-oss models through Groq. With your own key you can also switch to OpenRouter and pick any model you want: Claude, GPT, Gemini, Llama, Mistral and more, by pasting a key from openrouter.ai." data-es="El dictado usa Whisper Large v3 Turbo en el hardware de Groq, una de las combinaciones más rápidas y precisas que existen para voz a texto. Las predicciones, la edición con IA y Smart Actions usan modelos gpt-oss de OpenAI a través de Groq. Con tu propia llave también puedes cambiar a OpenRouter y elegir el modelo que quieras: Claude, GPT, Gemini, Llama, Mistral y más, pegando una llave de openrouter.ai.">Dictation runs on <strong>Whisper Large v3 Turbo</strong> on Groq's hardware, one of the fastest and most accurate speech-to-text setups available. Predictions, AI editing and Smart Actions run on <strong>OpenAI gpt-oss models</strong> through Groq. With your own key you can also switch to <strong>OpenRouter</strong> and pick any model you want: Claude, GPT, Gemini, Llama, Mistral and more, by pasting a key from <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a>.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-q" data-en="Does the monthly plan get better models than bringing my own key?" data-es="¿El plan mensual trae mejores modelos que traer mi propia llave?">Does the monthly plan get better models than bringing my own key?</div>
+                    <p class="faq-a" data-en="The models are the same today, but they do not stay in step. On the monthly plan we choose the engine on our side, so the day a faster or more accurate model appears, everyone on the plan moves to it at once, with no app update and nothing to change in Settings. With your own key you choose the model yourself, which means you keep exactly the one you picked until you go and change it. Neither one is better: one is hands-off, the other is hands-on." data-es="Hoy son los mismos modelos, pero no avanzan igual. En el plan mensual el motor lo elegimos nosotros, así que el día que sale un modelo más rápido o más preciso, todos los del plan se pasan a él de golpe, sin actualizar la app y sin tocar Ajustes. Con tu propia llave el modelo lo eliges tú, o sea que te quedas exactamente con el que escogiste hasta que vayas y lo cambies. Ninguno es mejor: uno es despreocupado y el otro es a tu medida.">The models are the <strong>same today</strong>, but they do not stay in step. On the monthly plan we choose the engine on our side, so the day a faster or more accurate model appears, <strong>everyone on the plan moves to it at once</strong>, with no app update and nothing to change in Settings. With your own key <strong>you choose the model yourself</strong>, which means you keep exactly the one you picked until you go and change it. Neither one is better: one is hands-off, the other is hands-on.</p>
                 </div>
 
                 <div class="faq-item">
@@ -3038,12 +3032,12 @@
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="Is GroqBoard private and secure?" data-es="¿GroqBoard es privado y seguro?">Is GroqBoard private and secure?</div>
-                    <p class="faq-a" data-en="Your audio goes from your phone straight to the AI provider you chose, using your own API key. There is no GroqBoard server in the middle, because there is no GroqBoard server at all, which is also why there is no subscription. Your API keys, snippets, custom vocabulary and learned words stay on your device. Transcription history is kept locally and you can clear it whenever you want." data-es="Tu audio va de tu teléfono directo al proveedor de IA que elegiste, usando tu propia API key. No hay un servidor de GroqBoard en medio, porque no hay servidor de GroqBoard, que es también por lo que no hay suscripción. Tus API keys, snippets, vocabulario personalizado y palabras aprendidas se quedan en tu dispositivo. El historial de transcripciones se guarda localmente y lo puedes borrar cuando quieras.">Your audio goes from your phone <strong>straight to the AI provider you chose</strong>, using your own API key. There is no GroqBoard server in the middle, because there is no GroqBoard server at all, which is also why there is no subscription. Your API keys, snippets, custom vocabulary and learned words stay on your device. Transcription history is kept locally and you can clear it whenever you want.</p>
+                    <p class="faq-a" data-en="It depends on which option you use, and the difference is worth knowing. With your own API key, your audio goes from your phone straight to the provider you chose and there is no GroqBoard server in the middle at all. On the monthly plan it passes through api.groqboard.com, which holds the key on your behalf and forwards the request; what we keep there is a 24 hour access pass, an anonymous account id and a counter of how much you used, never your audio and never your transcripts. Either way, your API keys, snippets, custom vocabulary and learned words stay on your device, and transcription history is local and you can clear it whenever you want." data-es="Depende de cuál opción uses, y vale la pena saber la diferencia. Con tu propia API key, tu audio va de tu teléfono directo al proveedor que elegiste y no hay ningún servidor de GroqBoard en medio. En el plan mensual pasa por api.groqboard.com, que guarda la llave por ti y reenvía la petición; lo que conservamos ahí es un pase de acceso de 24 horas, un identificador anónimo de cuenta y un contador de cuánto usaste, nunca tu audio y nunca tus transcripciones. En cualquiera de los dos casos, tus API keys, snippets, vocabulario personalizado y palabras aprendidas se quedan en tu dispositivo, y el historial de transcripciones es local y lo puedes borrar cuando quieras.">It depends on which option you use, and the difference is worth knowing. With your own API key, your audio goes from your phone <strong>straight to the provider you chose</strong> and there is no GroqBoard server in the middle at all. On the monthly plan it passes through api.groqboard.com, which holds the key on your behalf and forwards the request; what we keep there is a 24 hour access pass, an anonymous account id and a counter of how much you used, <strong>never your audio and never your transcripts</strong>. Either way, your API keys, snippets, custom vocabulary and learned words stay on your device, and transcription history is local and you can clear it whenever you want.</p>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-q" data-en="What is the best AI voice keyboard for Android?" data-es="¿Cuál es el mejor teclado de voz con IA para Android?">What is the best AI voice keyboard for Android?</div>
-                    <p class="faq-a" data-en="We are obviously biased, so here is what to compare on instead of taking our word for it: accuracy of the speech model, how it charges you, and whether it makes you abandon your keyboard. GroqBoard runs Whisper v3 Large on Groq's hardware, charges one payment of about $4.99 instead of $10-30 every month, and since v10 it can dock onto Gboard, SwiftKey or Samsung Keyboard rather than replacing them. There is a 7-day trial with no credit card, so you can check all three claims yourself." data-es="Obviamente somos parciales, así que mejor te decimos qué comparar en vez de creernos: la precisión del modelo de voz, cómo te cobran, y si te obliga a abandonar tu teclado. GroqBoard usa Whisper v3 Large en el hardware de Groq, cobra un solo pago de unos $4.99 en vez de $10-30 cada mes, y desde la v10 se puede acoplar a Gboard, SwiftKey o el Teclado Samsung en vez de reemplazarlos. Hay 7 días de prueba sin tarjeta, así que puedes verificar las tres cosas tú mismo.">We are obviously biased, so here is what to compare on instead of taking our word for it: <strong>accuracy of the speech model</strong>, <strong>how it charges you</strong>, and <strong>whether it makes you abandon your keyboard</strong>. GroqBoard runs Whisper v3 Large on Groq's hardware, charges one payment of about $4.99 instead of $10-30 every month, and since v10 it can dock onto Gboard, SwiftKey or Samsung Keyboard rather than replacing them. There is a 7-day trial with no credit card, so you can check all three claims yourself.</p>
+                    <p class="faq-a" data-en="We are obviously biased, so here is what to compare on instead of taking our word for it: accuracy of the speech model, how it charges you, and whether it makes you abandon your keyboard. GroqBoard runs Whisper Large v3 Turbo on Groq's hardware; it is free with your own API key and about $2.99 a month if you want the key included, against the $10 to $30 a month the others charge; and since v10 it docks onto Gboard, SwiftKey or Samsung Keyboard rather than replacing them. You can check all three claims without paying anything." data-es="Obviamente somos parciales, así que mejor te decimos qué comparar en vez de creernos: la precisión del modelo de voz, cómo te cobran, y si te obliga a abandonar tu teclado. GroqBoard usa Whisper Large v3 Turbo en el hardware de Groq; es gratis con tu propia API key y unos $2.99 al mes si quieres la llave incluida, contra los $10 a $30 mensuales que cobran los demás; y desde la v10 se acopla a Gboard, SwiftKey o el Teclado Samsung en vez de reemplazarlos. Puedes verificar las tres cosas sin pagar nada.">We are obviously biased, so here is what to compare on instead of taking our word for it: <strong>accuracy of the speech model</strong>, <strong>how it charges you</strong>, and <strong>whether it makes you abandon your keyboard</strong>. GroqBoard runs Whisper Large v3 Turbo on Groq's hardware; it is <strong>free with your own API key</strong> and about $2.99 a month if you want the key included, against the $10 to $30 a month the others charge; and since v10 it docks onto Gboard, SwiftKey or Samsung Keyboard rather than replacing them. You can check all three claims without paying anything.</p>
                 </div>
 
             </div>
