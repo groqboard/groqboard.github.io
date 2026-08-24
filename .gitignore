@@ -1,0 +1,13 @@
+# Este repo SE PUBLICA al hacer push a main: todo lo que quede rastreado acaba en
+# una URL publica. Un `git add -A` distraido ya metio aqui el plan de outreach, las
+# instrucciones internas y dos CSV de Google Ads, y solo se noto al revisar el diff
+# justo antes de publicar. Lo que no es parte del sitio no entra.
+.claude/
+CLAUDE.md
+outreach_plan.md
+*.csv
+1.png
+2.png
+3.png
+4.png
+GroqBoard_old.mp4
